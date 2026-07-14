@@ -1,0 +1,47 @@
+import { motion } from "framer-motion"
+import ImagePlaceholder from "../../components/ImagePlaceholder"
+
+const revealProps = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-100px" },
+  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+}
+
+const screens = [
+  { label: "Pantalla 1", instruction: "Aquí va: vista de inicio / dashboard principal del producto" },
+  { label: "Pantalla 2", instruction: "Aquí va: flujo principal en su paso más representativo" },
+  { label: "Pantalla 3", instruction: "Aquí va: estado de confirmación o éxito del flujo principal" },
+  { label: "Pantalla 4", instruction: "Aquí va: vista de detalle o configuración secundaria" },
+]
+
+const CSFinalScreens = ({ project }) => {
+  return (
+    <section className="section cs-final-screens">
+      <div className="container">
+        <motion.p {...revealProps} className="eyebrow">
+          Diseño final
+        </motion.p>
+
+        <motion.div {...revealProps} className="cs-final-screens__hero">
+          <ImagePlaceholder
+            label={`Pantalla principal — ${project.name}`}
+            aspectRatio="16/9"
+            instruction="Aquí va: la pantalla hero / principal del producto terminado, en alta resolución"
+          />
+        </motion.div>
+
+        <div className="cs-final-screens__grid">
+          {screens.map((s) => (
+            <motion.div {...revealProps} key={s.label} className="cs-final-screens__item">
+              <ImagePlaceholder label={s.label} aspectRatio="3/4" instruction={s.instruction} />
+              <p className="cs-final-screens__caption">{s.instruction}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default CSFinalScreens
