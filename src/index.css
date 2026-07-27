@@ -205,13 +205,14 @@ h1, h2, h3, h4 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1.5px solid var(--color-ink);
+  border: 1.5px solid #FFFFFF;
   background: transparent;
   pointer-events: none;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
+  mix-blend-mode: difference;
   transition: width 0.25s var(--ease-editorial), height 0.25s var(--ease-editorial),
     background 0.25s var(--ease-editorial);
   will-change: transform;
@@ -221,7 +222,8 @@ h1, h2, h3, h4 {
   opacity: 0;
   font-size: 13px;
   font-weight: 500;
-  color: var(--color-bg);
+  color: #FFFFFF;
+  mix-blend-mode: difference;
   white-space: nowrap;
   transition: opacity 0.2s var(--ease-editorial);
 }
@@ -229,8 +231,8 @@ h1, h2, h3, h4 {
 .custom-cursor--hover {
   width: 64px;
   height: 64px;
-  background: var(--color-ink);
-  border-color: var(--color-ink);
+  background: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .custom-cursor--hover .custom-cursor__label {
