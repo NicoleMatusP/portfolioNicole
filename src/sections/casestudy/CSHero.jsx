@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import Breadcrumbs from "../../components/Breadcrumbs"
 
-const CSHero = ({ project, content }) => {
+const CSHero = ({ project, content, breadcrumbs }) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -13,6 +14,8 @@ const CSHero = ({ project, content }) => {
   return (
     <section className="cs-hero" style={{ background: project.color }}>
       <div className="container cs-hero__inner">
+        {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

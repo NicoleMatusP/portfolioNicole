@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 const revealProps = {
   initial: { opacity: 0, y: 30 },
@@ -23,6 +24,12 @@ const stack = [
 ]
 
 const About = () => {
+  const [openIndex, setOpenIndex] = useState(0)
+
+  const toggle = (index) => {
+    setOpenIndex((current) => (current === index ? null : index))
+  }
+
   return (
     <section id="sobre" className="section about">
       <div className="container about__grid">
@@ -42,16 +49,41 @@ const About = () => {
         </motion.div>
 
         <motion.div {...revealProps} className="about__stack">
-          {stack.map((group) => (
-            <div key={group.category} className="about__stack-group">
-              <h4 className="about__stack-title">{group.category}</h4>
-              <ul className="about__stack-list">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {stack.map((group, index) => {
+            const isOpen = openIndex === index
+            return (
+              <div key={group.category} className="about__stack-group">
+                <button
+                  type="button"
+                  className="about__stack-title"
+                  onClick={() => toggle(index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`stack-panel-${index}`}
+                >
+                  {group.category}
+                  <span className={`about__stack-icon ${isOpen ? "about__stack-icon--open" : ""}`}>+</span>
+                </button>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`stack-panel-${index}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <ul className="about__stack-list">
+                        {group.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )
+          })}
         </motion.div>
       </div>
     </section>

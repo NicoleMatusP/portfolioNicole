@@ -25,8 +25,8 @@ const CSBenchmark = ({ content }) => {
               <h4 className="cs-benchmark__name">{c.name}</h4>
               <span className="cs-benchmark__category">{c.category}</span>
               <ul className="cs-benchmark__observations">
-                {c.observations.map((o) => (
-                  <li key={o}>{o}</li>
+                {c.observations.map((o, i) => (
+                  <li key={i}>{o}</li>
                 ))}
               </ul>
             </motion.div>

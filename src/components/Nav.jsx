@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
+import Logo from "./Logo"
 
 const links = [
   { label: "Proyectos", href: "#proyectos" },
@@ -41,8 +42,9 @@ const Nav = () => {
     <>
       <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
         <div className="nav__inner container">
-          <Link to="/" className="nav__logo">
-            Nicole Matus
+          <Link to="/" className="nav__logo" aria-label="Nicole Matus — inicio">
+            <Logo className="nav__logo-mark" />
+            <span className="visually-hidden">Nicole Matus</span>
           </Link>
 
           <nav className="nav__links">

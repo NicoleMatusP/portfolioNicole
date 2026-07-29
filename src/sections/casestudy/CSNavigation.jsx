@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom"
 import { getAdjacentProjects } from "../../data/projects"
 
+const linkFor = (project) => (project.type === "empresa" ? `/empresa/${project.slug}` : `/proyecto/${project.slug}`)
+
 const CSNavigation = ({ currentSlug }) => {
   const { prev, next } = getAdjacentProjects(currentSlug)
 
   return (
     <section className="cs-navigation">
       <div className="container cs-navigation__grid">
-        <Link to={`/proyecto/${prev.slug}`} className="cs-navigation__item cs-navigation__item--prev" data-cursor-hover>
+        <Link to={linkFor(prev)} className="cs-navigation__item cs-navigation__item--prev" data-cursor-hover>
           <div className="cs-navigation__thumb" style={{ background: prev.color }} />
           <div>
             <span className="eyebrow">← Proyecto anterior</span>
@@ -15,7 +17,7 @@ const CSNavigation = ({ currentSlug }) => {
           </div>
         </Link>
 
-        <Link to={`/proyecto/${next.slug}`} className="cs-navigation__item cs-navigation__item--next" data-cursor-hover>
+        <Link to={linkFor(next)} className="cs-navigation__item cs-navigation__item--next" data-cursor-hover>
           <div>
             <span className="eyebrow">Proyecto siguiente →</span>
             <h4 className="font-display">{next.name}</h4>

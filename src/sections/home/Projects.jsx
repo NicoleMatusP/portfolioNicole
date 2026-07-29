@@ -11,8 +11,14 @@ const revealProps = {
 
 const ProjectCard = ({ project, size = "half" }) => (
   <motion.div {...revealProps} className={`project-card project-card--${size}`}>
-    <Link to={`/proyecto/${project.slug}`} className="project-card__link" data-cursor-hover>
-      <div className="project-card__image" style={{ background: project.color }} />
+    <Link
+      to={project.type === "empresa" ? `/empresa/${project.slug}` : `/proyecto/${project.slug}`}
+      className="project-card__link"
+      data-cursor-hover
+    >
+      <div className="project-card__image" style={{ background: project.color }}>
+        {project.badge && <span className="pill project-card__badge">{project.badge}</span>}
+      </div>
       <div className="project-card__meta">
         <span className="project-card__number">{project.number}</span>
         <div className="project-card__text">

@@ -7,7 +7,7 @@ const revealProps = {
   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
 }
 
-const CSProblem = ({ content }) => {
+const CSProblem = ({ content, italic = false }) => {
   return (
     <section className="section cs-problem">
       <div className="container">
@@ -15,7 +15,10 @@ const CSProblem = ({ content }) => {
           El problema
         </motion.p>
 
-        <motion.h2 {...revealProps} className="cs-problem__statement font-display">
+        <motion.h2
+          {...revealProps}
+          className={`cs-problem__statement ${italic ? "font-display-italic" : "font-display"}`}
+        >
           {content.statement}
         </motion.h2>
 

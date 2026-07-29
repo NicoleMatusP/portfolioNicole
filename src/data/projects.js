@@ -1,16 +1,16 @@
 export const projects = [
   {
-    slug: "aiep-campus-digital",
+    slug: "aiep",
+    type: "empresa",
     number: "01",
-    name: "AIEP Campus Digital",
-    description: "Rediseño de la plataforma educativa para +40.000 estudiantes.",
-    tags: ["UX Research", "Design System", "Figma"],
+    name: "AIEP",
+    description:
+      "Modernización de la intranet estudiantil y migración del sitio institucional a HubSpot.",
+    tags: ["Design System", "Rediseño Web", "Metodología Ágil"],
     color: "#1A1A2E",
-    year: "2025",
-    role: "Product Designer",
-    company: "AIEP",
-    tools: ["Figma", "FigJam", "Maze", "React"],
-    duration: "6 meses",
+    year: "2025 — 2026",
+    role: "UX/UI Designer",
+    badge: "2 casos de estudio",
   },
   {
     slug: "phero-app",

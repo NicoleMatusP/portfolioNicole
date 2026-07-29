@@ -88,7 +88,11 @@ const CaseStudy = () => {
 
   return (
     <main className="case-study">
-      <CSHero project={project} content={content.hero} />
+      <CSHero
+        project={project}
+        content={content.hero}
+        breadcrumbs={[{ label: "Inicio", to: "/" }, { label: project.name }]}
+      />
 
       <ProgressIndicator activeId={activeId} />
 

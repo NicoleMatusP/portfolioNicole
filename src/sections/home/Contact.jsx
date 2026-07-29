@@ -37,7 +37,7 @@ const Contact = () => {
           próximo proyecto.
         </motion.h2>
 
-        <motion.button {...revealProps} onClick={copyEmail} className="contact__email link-underline" data-cursor-hover>
+        <motion.button {...revealProps} onClick={copyEmail} className="contact__email link-underline">
           {EMAIL}
         </motion.button>
 

@@ -2,8 +2,11 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Routes, Route, useLocation } from "react-router-dom"
 import Nav from "./components/Nav"
 import CustomCursor from "./components/CustomCursor"
+import PasswordGate from "./components/PasswordGate"
 import Home from "./pages/Home"
 import CaseStudy from "./pages/CaseStudy"
+import CompanyPage from "./pages/CompanyPage"
+import EmployeeCaseStudy from "./pages/EmployeeCaseStudy"
 
 const pageVariants = {
   initial: { opacity: 0, scale: 1.01 },
@@ -31,6 +34,34 @@ function App() {
             element={
               <PageWrapper>
                 <Home />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/empresa/:slug"
+            element={
+              <PageWrapper>
+                <CompanyPage />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/proyecto/aiep-intranet"
+            element={
+              <PageWrapper>
+                <PasswordGate>
+                  <EmployeeCaseStudy slug="aiep-intranet" />
+                </PasswordGate>
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/proyecto/aiep-hubspot"
+            element={
+              <PageWrapper>
+                <PasswordGate>
+                  <EmployeeCaseStudy slug="aiep-hubspot" />
+                </PasswordGate>
               </PageWrapper>
             }
           />

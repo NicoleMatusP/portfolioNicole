@@ -17,8 +17,8 @@ const CSResults = ({ content }) => {
         </motion.p>
 
         <div className="cs-results__grid">
-          {content.metrics.map((metric) => (
-            <motion.div {...revealProps} key={metric.label} className="cs-results__metric">
+          {content.metrics.map((metric, i) => (
+            <motion.div {...revealProps} key={i} className="cs-results__metric">
               <span className="cs-results__value font-display">{metric.value}</span>
               <p className="cs-results__label">{metric.label}</p>
             </motion.div>

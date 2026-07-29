@@ -40,7 +40,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div className="hero__ctas" variants={line}>
-            <a href="#proyectos" className="btn" data-cursor-hover>
+            <a href="#proyectos" className="btn">
               Ver proyectos →
             </a>
             <a href="mailto:nicole.matusp@gmail.com" className="btn btn--ghost">
