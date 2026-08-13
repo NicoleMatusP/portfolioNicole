@@ -1,13 +1,25 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
 const PASSWORD = "figma2react"
 const SESSION_KEY = "portfolio_access"
+// Autocompleta y envía la contraseña sola mientras se itera en los casos protegidos. Quitar antes de publicar.
+const DEV_AUTOFILL = true
 
 const PasswordGate = ({ children }) => {
   const [granted, setGranted] = useState(() => sessionStorage.getItem(SESSION_KEY) === "granted")
   const [value, setValue] = useState("")
   const [error, setError] = useState(false)
+
+  useEffect(() => {
+    if (granted || !DEV_AUTOFILL) return
+    setValue(PASSWORD)
+    const timeout = setTimeout(() => {
+      sessionStorage.setItem(SESSION_KEY, "granted")
+      setGranted(true)
+    }, 400)
+    return () => clearTimeout(timeout)
+  }, [granted])
 
   const handleSubmit = (e) => {
     e.preventDefault()

@@ -9,6 +9,7 @@ import ECContext from "../sections/casestudy/ECContext"
 import ECTeam from "../sections/casestudy/ECTeam"
 import ECRole from "../sections/casestudy/ECRole"
 import ECProcess from "../sections/casestudy/ECProcess"
+import ECSubprojects from "../sections/casestudy/ECSubprojects"
 import ECLearnings from "../sections/casestudy/ECLearnings"
 import ECNavigation from "../sections/casestudy/ECNavigation"
 
@@ -32,6 +33,7 @@ const EmployeeCaseStudy = ({ slug: slugProp }) => {
     name: data.name,
     tags: data.tags,
     color: data.color,
+    gradient: data.heroGradient,
   }
 
   return (
@@ -50,6 +52,7 @@ const EmployeeCaseStudy = ({ slug: slugProp }) => {
       {data.team && <ECTeam data={data.team} />}
       <ECRole blocks={data.roleDetail} />
       <ECProcess steps={data.process} />
+      {data.subprojects && <ECSubprojects intro={data.subprojects.intro} items={data.subprojects.items} />}
       <ECLearnings data={data.learnings} />
       <ECNavigation currentSlug={slug} />
       <Footer />

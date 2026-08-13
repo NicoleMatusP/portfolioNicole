@@ -5,6 +5,7 @@ import { getCompanyBySlug } from "../data/companies"
 import Footer from "../components/Footer"
 import ImagePlaceholder from "../components/ImagePlaceholder"
 import Breadcrumbs from "../components/Breadcrumbs"
+import aiepCover from "../assets/aiep/CoverAIEP.jpg"
 
 const revealProps = {
   initial: { opacity: 0, y: 30 },
@@ -27,7 +28,7 @@ const CompanyPage = () => {
 
   return (
     <main className="company-page">
-      <section className="company-hero">
+      <section className="company-hero" style={{ backgroundImage: `url(${aiepCover})` }}>
         <div className="container">
           <Breadcrumbs items={[{ label: "Inicio", to: "/" }, { label: company.name }]} />
 
@@ -105,7 +106,12 @@ const CompanyPage = () => {
               >
                 <span className="company-case-card__number font-display">{cs.number}</span>
                 <div className="company-case-card__image">
-                  <ImagePlaceholder label={cs.image.label} aspectRatio="4/3" instruction={cs.image.instruction} />
+                  <ImagePlaceholder
+                    label={cs.image.label}
+                    aspectRatio="4/3"
+                    instruction={cs.image.instruction}
+                    src={cs.image.src}
+                  />
                 </div>
                 <div className="company-case-card__text">
                   <h3 className="company-case-card__name font-display">{cs.name}</h3>

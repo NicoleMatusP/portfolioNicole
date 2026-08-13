@@ -12,7 +12,7 @@ const CSHero = ({ project, content, breadcrumbs }) => {
   }, [])
 
   return (
-    <section className="cs-hero" style={{ background: project.color }}>
+    <section className="cs-hero" style={{ background: project.gradient || project.color }}>
       <div className="container cs-hero__inner">
         {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
 

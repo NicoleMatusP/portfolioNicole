@@ -14,7 +14,6 @@ const ECContext = ({ data }) => {
     { label: "Duración", value: data.duration },
     { label: "Mi rol", value: data.role },
     { label: "Herramientas", value: data.tools.join(" · ") },
-    { label: "Estado", value: data.status === "Implementado" ? "Implementado ✓" : data.status },
   ]
 
   return (

@@ -1,9 +1,11 @@
+import cardProyectoIntranet from "../assets/aiep/card-proyecto-intranet.jpg"
+
 export const companies = {
   aiep: {
     name: "AIEP",
     period: "Abr 2025 — Jul 2026",
     heroDescription:
-      "AIEP es la institución de educación superior técnico-profesional más grande de Chile, con más de 100.000 estudiantes en todo el país. Durante mi tiempo aquí fui parte del equipo de producto digital, trabajando en la modernización de plataformas internas y el rediseño de la presencia web institucional.",
+      "AIEP es la institución de educación superior técnico-profesional más grande de Chile, con más de 100.000 estudiantes en todo el país. Durante este período se trabajó dentro del equipo de producto digital, en la modernización de plataformas internas y el rediseño de la presencia web institucional.",
     roleContext: [
       { label: "Mi rol", value: "UX/UI Designer" },
       { label: "Período", value: "Abril 2025 — Julio 2026" },
@@ -13,7 +15,7 @@ export const companies = {
     ],
     aboutTeam: {
       paragraph:
-        "Fui parte de una célula de trabajo multidisciplinaria compuesta por diseño, contenido, área comercial y TI. Trabajábamos bajo metodología ágil con un backlog compartido donde organizábamos las tareas por sprint. Esta forma de trabajar me permitió colaborar directamente con perfiles muy distintos al diseño y tomar decisiones considerando restricciones técnicas, de negocio y de contenido al mismo tiempo.",
+        "La célula de trabajo era multidisciplinaria, compuesta por diseño, contenido, área comercial y TI. Se trabajaba bajo metodología ágil con un backlog compartido donde se organizaban las tareas por sprint. Esta forma de trabajar permitía colaborar directamente con perfiles muy distintos al diseño y tomar decisiones considerando restricciones técnicas, de negocio y de contenido al mismo tiempo.",
       tags: ["Sprints", "Backlog compartido", "Equipo multidisciplinario"],
     },
     caseStudies: [
@@ -28,6 +30,7 @@ export const companies = {
         image: {
           label: "Intranet Estudiantil",
           instruction: "Subir: captura de la pantalla principal de la intranet ya rediseñada, vista desktop",
+          src: cardProyectoIntranet,
         },
       },
       {
