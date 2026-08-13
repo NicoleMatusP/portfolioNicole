@@ -1,3 +1,5 @@
+import designSystem from "../assets/aiep/design-system.jpg"
+
 export const aiepCaseStudies = {
   "aiep-intranet": {
     company: "AIEP",
@@ -84,9 +86,10 @@ export const aiepCaseStudies = {
             instruction: "Subir: capturas de los flujos rediseñados en Figma, vista de varios frames juntos",
           },
           {
-            label: "Design System — Componentes nuevos y aplicados",
-            aspectRatio: "16/6",
+            label: "Design System — New & Applied Components",
+            aspectRatio: "900/737",
             instruction: "Subir: muestra de los componentes del DS usados, incluyendo los que sumé durante el proyecto",
+            src: designSystem,
           },
         ],
       },
