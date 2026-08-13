@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import ImagePlaceholder from "../../components/ImagePlaceholder"
+import ECSynthesisTable from "./ECSynthesisTable"
 
 const revealProps = {
   initial: { opacity: 0, y: 30 },
@@ -28,13 +29,26 @@ const ECProcess = ({ steps }) => {
                 {step.description}
               </motion.p>
 
-              <div className="ec-process__images">
-                {step.images.map((img) => (
-                  <motion.div {...revealProps} key={img.label}>
-                    <ImagePlaceholder label={img.label} aspectRatio={img.aspectRatio} instruction={img.instruction} />
-                  </motion.div>
-                ))}
-              </div>
+              {step.synthesis && (
+                <motion.div {...revealProps}>
+                  <ECSynthesisTable data={step.synthesis} />
+                </motion.div>
+              )}
+
+              {step.images.length > 0 && (
+                <div className="ec-process__images">
+                  {step.images.map((img) => (
+                    <motion.div {...revealProps} key={img.label}>
+                      <ImagePlaceholder
+                        label={img.label}
+                        aspectRatio={img.aspectRatio}
+                        instruction={img.instruction}
+                        src={img.src}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

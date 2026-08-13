@@ -41,13 +41,36 @@ export const aiepCaseStudies = {
         title: "Diagnóstico",
         description:
           "Se realizó un análisis heurístico de la intranet actual, evaluando por separado la app móvil y el sitio de escritorio bajo los principios de usabilidad de Nielsen y clasificando cada hallazgo según su severidad. Los problemas más críticos fueron la falta de jerarquía visual, la inconsistencia entre los módulos propios y los de proveedores externos, la ausencia de feedback visual en botones y flujos, y una navegación limitada por la falta de un retorno claro a la intranet. Con esos hallazgos, se hizo un benchmark de otras plataformas educativas bajo seis criterios —usabilidad, diseño visual, contenido, interacción, confianza y performance— para identificar buenas prácticas aplicables, como accesos rápidos personalizables, paneles configurables y confirmaciones claras en procesos críticos.",
-        images: [
-          {
-            label: "Diagnóstico — Heurístico y benchmark",
-            aspectRatio: "16/7",
-            instruction: "Subir: tablero del análisis heurístico en FigJam o cuadro comparativo del benchmark realizado",
-          },
-        ],
+        synthesis: {
+          eyebrow: "Síntesis de hallazgos",
+          columns: [
+            {
+              title: "Análisis heurístico",
+              subtitle: "10 principios de Nielsen · app móvil y escritorio",
+              rows: [
+                { number: "01", label: "Jerarquía visual y diseño minimalista", severity: "Crítica" },
+                { number: "02", label: "Control y libertad del usuario", severity: "Crítica" },
+                { number: "03", label: "Prevención de errores", severity: "Crítica" },
+                { number: "04", label: "Consistencia y estándares", severity: "Alta" },
+                { number: "05", label: "Visibilidad del estado del sistema", severity: "Alta" },
+              ],
+            },
+            {
+              title: "Análisis benchmark",
+              subtitle: "6 criterios · plataformas educativas referentes",
+              rows: [
+                { number: "01", label: "Usabilidad y arquitectura" },
+                { number: "02", label: "Diseño visual (UI)" },
+                { number: "03", label: "Contenido y comunicación" },
+                { number: "04", label: "Interacción y feedback" },
+                { number: "05", label: "Confianza y credibilidad" },
+                { number: "06", label: "Performance e innovación" },
+              ],
+              note: "Buenas prácticas detectadas: accesos rápidos personalizables, paneles configurables y confirmaciones en procesos críticos.",
+            },
+          ],
+        },
+        images: [],
       },
       {
         number: "02",

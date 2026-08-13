@@ -780,7 +780,7 @@ h1, h2, h3, h4 {
 
 .process__number {
   font-size: 40px;
-  color: var(--color-line);
+  color: var(--color-muted);
   flex-shrink: 0;
   width: 64px;
 }
@@ -1010,7 +1010,7 @@ h1, h2, h3, h4 {
 
 .cs-research__method-icon {
   font-size: 28px;
-  color: var(--color-line);
+  color: var(--color-muted);
   display: block;
   margin-bottom: 12px;
 }
@@ -1044,7 +1044,7 @@ h1, h2, h3, h4 {
 
 .cs-research__finding-number {
   font-size: 36px;
-  color: var(--color-line);
+  color: var(--color-muted);
   flex-shrink: 0;
 }
 
@@ -1507,7 +1507,7 @@ h1, h2, h3, h4 {
 
 .company-case-card__number {
   font-size: 36px;
-  color: var(--color-line);
+  color: var(--color-muted);
   flex-shrink: 0;
 }
 
@@ -1688,7 +1688,7 @@ h1, h2, h3, h4 {
 
 .ec-process__number {
   font-size: 40px;
-  color: var(--color-line);
+  color: var(--color-muted);
 }
 
 .ec-process__title {
@@ -1705,6 +1705,117 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.synthesis {
+  position: relative;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  padding: 40px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.synthesis__eyebrow {
+  margin-bottom: 20px;
+}
+
+.synthesis .divider {
+  margin-bottom: 32px;
+}
+
+.synthesis__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.synthesis__title {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.synthesis__subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-muted);
+  margin-bottom: 16px;
+}
+
+.synthesis__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.synthesis__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.synthesis__row:last-child {
+  border-bottom: none;
+}
+
+.synthesis__num {
+  flex-shrink: 0;
+  width: 22px;
+  font-size: 17px;
+  color: var(--color-muted);
+}
+
+.synthesis__label {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-ink);
+}
+
+.synthesis__severity {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.synthesis__note {
+  margin-top: 20px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.synthesis__bar {
+  height: 4px;
+  background: var(--color-accent);
+  margin: 32px -40px -40px;
+}
+
+@media (max-width: 860px) {
+  .synthesis__grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .synthesis__col + .synthesis__col {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-line);
+  }
+}
+
+@media (max-width: 720px) {
+  .synthesis {
+    padding: 28px 24px;
+  }
+
+  .synthesis__bar {
+    margin: 32px -24px -28px;
+  }
 }
 
 .ec-team {
@@ -1771,7 +1882,7 @@ h1, h2, h3, h4 {
 
 .ec-subprojects__number {
   font-size: 28px;
-  color: var(--color-line);
+  color: var(--color-muted);
   display: block;
   margin-bottom: 16px;
 }
