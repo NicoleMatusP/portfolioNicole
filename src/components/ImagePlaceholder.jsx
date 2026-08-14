@@ -1,8 +1,14 @@
+const isVideo = (src) => /\.(mp4|webm)(\?.*)?$/i.test(src)
+
 const ImagePlaceholder = ({ label, aspectRatio = "16/9", instruction, src }) => {
   if (src) {
     return (
       <div className="image-placeholder image-placeholder--filled" style={{ aspectRatio }}>
-        <img src={src} alt={label} />
+        {isVideo(src) ? (
+          <video src={src} autoPlay muted loop playsInline aria-label={label} />
+        ) : (
+          <img src={src} alt={label} />
+        )}
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import designSystem from "../assets/aiep/design-system.jpg"
+import prototipoPago from "../assets/aiep/prototipo-pago.mp4"
 
 export const aiepCaseStudies = {
   "aiep-intranet": {
@@ -101,8 +102,9 @@ export const aiepCaseStudies = {
         images: [
           {
             label: "Prototipo — Interacciones conectadas",
-            aspectRatio: "16/7",
+            aspectRatio: "1600/902",
             instruction: "Subir: captura del prototipo interactivo en Figma mostrando las conexiones entre pantallas",
+            src: prototipoPago,
           },
         ],
       },
