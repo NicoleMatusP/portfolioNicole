@@ -26,7 +26,12 @@ const ECSubprojects = ({ intro, items }) => {
           {items.map((item) => (
             <motion.div {...revealProps} key={item.number} className="ec-subprojects__card">
               <span className="ec-subprojects__number font-display">{item.number}</span>
-              <ImagePlaceholder label={item.image.label} aspectRatio="4/3" instruction={item.image.instruction} />
+              <ImagePlaceholder
+                label={item.image.label}
+                aspectRatio="4/3"
+                instruction={item.image.instruction}
+                src={item.image.src}
+              />
               <h4 className="ec-subprojects__name font-display">{item.name}</h4>
               <p className="ec-subprojects__description">{item.description}</p>
             </motion.div>

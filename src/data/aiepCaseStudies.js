@@ -1,5 +1,7 @@
 import designSystem from "../assets/aiep/design-system.jpg"
 import prototipoPago from "../assets/aiep/prototipo-pago.mp4"
+import prototipoMisSolicitudes from "../assets/aiep/prototipo-mis-solicitudes.jpg"
+import misSolicitudesPhoto from "../assets/aiep/mis-solicitudes-photo.jpg"
 
 export const aiepCaseStudies = {
   "aiep-intranet": {
@@ -83,8 +85,9 @@ export const aiepCaseStudies = {
         images: [
           {
             label: "Rediseño — Flujos en Figma",
-            aspectRatio: "16/9",
+            aspectRatio: "2800/1395",
             instruction: "Subir: capturas de los flujos rediseñados en Figma, vista de varios frames juntos",
+            src: prototipoMisSolicitudes,
           },
           {
             label: "Design System — New & Applied Components",
@@ -154,6 +157,7 @@ export const aiepCaseStudies = {
           image: {
             label: "Mis solicitudes",
             instruction: "Subir: captura del listado de solicitudes con sus estados (en curso, aprobada, rechazada)",
+            src: misSolicitudesPhoto,
           },
         },
         {
