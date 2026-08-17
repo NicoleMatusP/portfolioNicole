@@ -114,23 +114,10 @@ export const aiepCaseStudies = {
           },
         ],
       },
-      {
-        number: "04",
-        title: "Resultado",
-        description:
-          "Módulos entregados a cada proveedor con coherencia visual y de experiencia respecto al Design System de AIEP, listos para su implementación.",
-        images: [
-          {
-            label: "Resultado — Antes y después",
-            aspectRatio: "16/9",
-            instruction: "Subir: capturas del estado original vs. el rediseño en Figma. Dos columnas: antes / después",
-          },
-        ],
-      },
     ],
     subprojects: {
       intro:
-        "Dentro de esta estandarización general, el diseño de estos 4 módulos específicos se llevó de principio a fin, coordinando directamente con sus proveedores respectivos.",
+        "Como resultado de esta estandarización, se diseñaron estos 4 módulos específicos de principio a fin, coordinando directamente con sus proveedores respectivos y manteniendo coherencia visual y de experiencia con el Design System de AIEP, listos para su implementación.",
       items: [
         {
           number: "01",

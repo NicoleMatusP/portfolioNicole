@@ -85,9 +85,9 @@ h1, h2, h3, h4 {
 
 .eyebrow {
   font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--color-muted);
 }
@@ -441,62 +441,86 @@ h1, h2, h3, h4 {
   object-fit: cover;
 }
 
-/* Case study progress indicator */
-.cs-progress {
+/* Case study side navigation */
+.cs-sidenav {
   position: fixed;
-  right: 40px;
+  left: 48px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 300;
-  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-editorial);
 }
 
-.cs-progress__track {
+.cs-sidenav--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cs-sidenav__track {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding-left: 14px;
+  gap: 24px;
+  padding-left: 22px;
   border-left: 1px solid var(--color-line);
 }
 
-.cs-progress__item {
+.cs-sidenav__item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  position: relative;
+  gap: 12px;
+  padding: 2px 0;
+  text-align: left;
+  width: 100%;
 }
 
-.cs-progress__dot {
-  width: 6px;
-  height: 6px;
+@media (hover: hover) {
+  .cs-sidenav__item:hover .cs-sidenav__dot {
+    background: var(--color-muted);
+  }
+
+  .cs-sidenav__item:hover .cs-sidenav__label {
+    color: var(--color-ink);
+  }
+}
+
+.cs-sidenav__dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--color-line);
-  margin-left: -17.5px;
+  margin-left: -27px;
+  flex-shrink: 0;
   transition: background 0.3s var(--ease-editorial), transform 0.3s var(--ease-editorial);
 }
 
-.cs-progress__item--active .cs-progress__dot {
+.cs-sidenav__item--active .cs-sidenav__dot {
   background: var(--color-accent);
-  transform: scale(1.6);
+  transform: scale(1.5);
 }
 
-.cs-progress__label {
-  font-size: 12px;
+.cs-sidenav__label {
+  font-family: var(--font-body);
+  font-size: 15px;
   color: var(--color-muted);
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.3s var(--ease-editorial), transform 0.3s var(--ease-editorial);
   white-space: nowrap;
+  transition: color 0.3s var(--ease-editorial), font-weight 0.3s var(--ease-editorial);
 }
 
-.cs-progress__item--active .cs-progress__label {
-  opacity: 1;
-  transform: translateX(0);
+.cs-sidenav__item--active .cs-sidenav__label {
   color: var(--color-ink);
+  font-weight: 600;
 }
 
-@media (max-width: 1100px) {
-  .cs-progress {
+@media (min-width: 1301px) {
+  .case-study section:not(.cs-hero) > .container {
+    padding-left: calc(var(--container-padding) + 190px);
+  }
+}
+
+@media (max-width: 1300px) {
+  .cs-sidenav {
     display: none;
   }
 }
@@ -842,6 +866,7 @@ h1, h2, h3, h4 {
   color: var(--color-bg);
   position: relative;
   padding-top: 84px;
+  padding-bottom: 84px;
 }
 
 .cs-hero__inner {
@@ -1648,7 +1673,7 @@ h1, h2, h3, h4 {
 }
 
 .ec-role__title {
-  font-size: 24px;
+  font-size: clamp(26px, 3vw, 32px);
   margin-bottom: 12px;
 }
 
@@ -1693,7 +1718,7 @@ h1, h2, h3, h4 {
 }
 
 .ec-process__title {
-  font-size: clamp(24px, 2.6vw, 30px);
+  font-size: clamp(26px, 2.8vw, 32px);
 }
 
 .ec-process__description {
@@ -1707,6 +1732,7 @@ h1, h2, h3, h4 {
   flex-direction: column;
   gap: 20px;
 }
+
 
 .synthesis {
   position: relative;
@@ -1889,7 +1915,7 @@ h1, h2, h3, h4 {
 }
 
 .ec-subprojects__name {
-  font-size: clamp(22px, 2.4vw, 26px);
+  font-size: clamp(24px, 2.8vw, 30px);
   margin-top: 20px;
   margin-bottom: 10px;
 }

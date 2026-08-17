@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom"
 import { getProjectBySlug } from "../data/projects"
 import { caseStudyContent } from "../data/caseStudies"
 import Footer from "../components/Footer"
+import CaseStudySideNav from "../components/CaseStudySideNav"
 
 import CSHero from "../sections/casestudy/CSHero"
 import CSOverview from "../sections/casestudy/CSOverview"
@@ -30,23 +31,6 @@ const progressSteps = [
   { id: "prototype", label: "Prototipo" },
   { id: "results", label: "Resultados" },
 ]
-
-const ProgressIndicator = ({ activeId }) => {
-  const activeIndex = progressSteps.findIndex((s) => s.id === activeId)
-
-  return (
-    <div className="cs-progress" aria-hidden="true">
-      <div className="cs-progress__track">
-        {progressSteps.map((step, i) => (
-          <div key={step.id} className={`cs-progress__item ${i <= activeIndex ? "cs-progress__item--active" : ""}`}>
-            <span className="cs-progress__dot" />
-            <span className="cs-progress__label">{step.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
 
 const CaseStudy = () => {
   const { slug } = useParams()
@@ -94,7 +78,7 @@ const CaseStudy = () => {
         breadcrumbs={[{ label: "Inicio", to: "/" }, { label: project.name }]}
       />
 
-      <ProgressIndicator activeId={activeId} />
+      <CaseStudySideNav steps={progressSteps} activeId={activeId} />
 
       <div ref={setRef("overview")} data-section="overview">
         <CSOverview project={project} content={content.overview} />
