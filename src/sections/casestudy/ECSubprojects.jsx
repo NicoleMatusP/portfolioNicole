@@ -8,13 +8,19 @@ const revealProps = {
   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
 }
 
-const ECSubprojects = ({ intro, items }) => {
+const ECSubprojects = ({ title, intro, items }) => {
   return (
     <section className="section ec-subprojects">
       <div className="container">
         <motion.p {...revealProps} className="eyebrow">
           Subproyectos
         </motion.p>
+
+        {title && (
+          <motion.h3 {...revealProps} className="ec-subprojects__title font-display">
+            {title}
+          </motion.h3>
+        )}
 
         {intro && (
           <motion.p {...revealProps} className="ec-subprojects__intro">

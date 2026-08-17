@@ -11,6 +11,7 @@ const links = [
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [darkStart, setDarkStart] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -20,6 +21,15 @@ const Nav = () => {
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
+
+  useEffect(() => {
+    const compute = () => setDarkStart(!!document.querySelector(".cs-hero, .company-hero"))
+    compute()
+
+    const observer = new MutationObserver(compute)
+    observer.observe(document.body, { childList: true, subtree: true })
+    return () => observer.disconnect()
+  }, [location.pathname])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : ""
@@ -40,7 +50,9 @@ const Nav = () => {
 
   return (
     <>
-      <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
+      <header
+        className={`nav ${scrolled ? "nav--scrolled" : ""} ${darkStart && !scrolled && !menuOpen ? "nav--on-dark" : ""}`}
+      >
         <div className="nav__inner container">
           <Link to="/" className="nav__logo" aria-label="Nicole Matus — inicio">
             <Logo className="nav__logo-mark" />

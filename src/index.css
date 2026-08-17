@@ -260,6 +260,15 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--color-line);
 }
 
+.nav--on-dark .nav__logo,
+.nav--on-dark .nav__link {
+  color: #fff;
+}
+
+.nav--on-dark .nav__burger span {
+  background: #fff;
+}
+
 .nav__inner {
   display: flex;
   align-items: center;
@@ -1439,7 +1448,7 @@ h1, h2, h3, h4 {
   position: relative;
   background-color: var(--color-ink);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   color: var(--color-bg);
   padding-block: 14vh 10vh;
   overflow: hidden;
@@ -1886,6 +1895,12 @@ h1, h2, h3, h4 {
   display: inline-flex;
   margin-top: 24px;
   margin-bottom: 8px;
+}
+
+.ec-subprojects__title {
+  font-size: var(--size-section);
+  margin-top: 16px;
+  max-width: 780px;
 }
 
 .ec-subprojects__intro {
