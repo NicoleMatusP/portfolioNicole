@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 const navMap = {
   "aiep-intranet": {
     prev: { to: "/empresa/aiep", label: "Volver a AIEP" },
-    next: { to: "/proyecto/aiep-hubspot", label: "Siguiente caso: Sitio Institucional" },
+    next: { to: "/proyecto/aiep-educacion-continua", label: "Siguiente caso: Educación Continua" },
   },
-  "aiep-hubspot": {
+  "aiep-educacion-continua": {
     prev: { to: "/proyecto/aiep-intranet", label: "Caso anterior: Intranet Estudiantil" },
     next: { to: "/empresa/aiep", label: "Volver a AIEP" },
   },

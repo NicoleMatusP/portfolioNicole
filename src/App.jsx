@@ -56,11 +56,11 @@ function App() {
             }
           />
           <Route
-            path="/proyecto/aiep-hubspot"
+            path="/proyecto/aiep-educacion-continua"
             element={
               <PageWrapper>
                 <PasswordGate>
-                  <EmployeeCaseStudy slug="aiep-hubspot" />
+                  <EmployeeCaseStudy slug="aiep-educacion-continua" />
                 </PasswordGate>
               </PageWrapper>
             }

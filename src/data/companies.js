@@ -1,4 +1,5 @@
 import cardProyectoIntranet from "../assets/aiep/card-proyecto-intranet.jpg"
+import cardEducacionContinua from "../assets/aiep/educacion-continua-inicio.jpg"
 
 export const companies = {
   aiep: {
@@ -35,15 +36,16 @@ export const companies = {
       },
       {
         number: "02",
-        slug: "aiep-hubspot",
-        name: "Sitio Institucional — Migración a HubSpot",
+        slug: "aiep-educacion-continua",
+        name: "Sitio Web Educación Continua",
         description:
-          "Rediseño y migración de aiep.cl trabajando en célula ágil con equipo interno y la agencia Cebra.",
-        tags: ["Rediseño Web", "HubSpot", "Metodología Ágil"],
+          "Diseño de la propuesta end-to-end para ordenar la oferta de cursos y diplomados dentro del ecosistema digital de AIEP.",
+        tags: ["Discovery", "UX/UI", "HubSpot"],
         color: "#0D1F3C",
         image: {
-          label: "Sitio Institucional",
-          instruction: "Subir: captura del home del nuevo sitio aiep.cl en HubSpot, vista desktop",
+          label: "Sitio Web Educación Continua",
+          instruction: "Subir: captura de la pantalla de inicio del sitio, vista desktop",
+          src: cardEducacionContinua,
         },
       },
     ],

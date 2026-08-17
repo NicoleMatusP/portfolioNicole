@@ -116,6 +116,7 @@ export const aiepCaseStudies = {
       },
     ],
     subprojects: {
+      title: "Cuatro módulos. Un mismo Design System.",
       intro:
         "Como resultado de esta estandarización, se diseñaron estos 4 módulos específicos de principio a fin, coordinando directamente con sus proveedores respectivos y manteniendo coherencia visual y de experiencia con el Design System de AIEP, listos para su implementación.",
       items: [
@@ -178,114 +179,104 @@ export const aiepCaseStudies = {
     },
   },
 
-  "aiep-hubspot": {
+  "aiep-educacion-continua": {
     company: "AIEP",
-    name: "Sitio Institucional — Migración a HubSpot",
-    tagline: "Rediseño y migración de aiep.cl en célula ágil con equipo interno y agencia externa.",
-    tags: ["Rediseño Web", "HubSpot", "Metodología Ágil"],
+    name: "Sitio Web Educación Continua",
+    tagline:
+      "Ordenar la oferta de cursos y diplomados y facilitar la decisión de quienes buscan continuar su formación.",
+    tags: ["Discovery", "UX/UI", "HubSpot"],
     color: "#0D1F3C",
     year: "2025 — 2026",
     role: "UX/UI Designer",
-    tools: ["Figma", "HubSpot", "Azure DevOps"],
-    duration: "10 meses",
+    tools: ["Figma", "HubSpot"],
+    duration: "6 meses",
     context:
-      "El sitio institucional de AIEP necesitaba migrar a HubSpot para centralizar la gestión de contenido y marketing. Pero no era solo una migración técnica: el sitio requería rediseño visual para modernizarse, y el proceso involucraba alinear a múltiples áreas internas con criterios y prioridades distintas, además de coordinar la implementación con la agencia externa Cebra.",
+      "Educación Continua es el sitio donde estudiantes y profesionales pueden explorar cursos y diplomados para continuar o complementar su formación, conocer sus características e inscribirse. Se identificó que la experiencia digital existente no lograba ordenar la oferta ni comunicar con claridad la propuesta de valor para quienes buscaban este tipo de formación.",
     team: {
-      headline: "Un equipo, cinco disciplinas, un backlog.",
+      headline: "Dos squads, un mismo sitio.",
       paragraph:
-        "La célula era multidisciplinaria, con representantes de diseño, contenido, área comercial, TI y la agencia Cebra. Se trabajaba bajo metodología ágil con sprints de dos semanas y un backlog compartido donde cada área registraba sus tareas y dependencias.",
-      roles: ["Diseño UX/UI", "Contenido", "Comercial", "TI", "Agencia Cebra"],
+        "El trabajo se organizó entre dos squads: Squad Web, a cargo de la plataforma y sus lineamientos generales, y Squad Educación Continua, enfocado en las necesidades específicas de esta área. El proceso partió con un workshop interno junto a ambos equipos para alinear visión y objetivos antes de diseñar.",
+      roles: ["Squad Web", "Squad Educación Continua"],
       closing:
-        "Esta estructura implicaba comunicar decisiones de diseño a perfiles no técnicos, negociar prioridades con el área comercial y mantener coherencia visual cuando la implementación la hacía un tercero.",
+        "Coordinar ambos squads implicó traducir los objetivos comerciales del área de Educación Continua en decisiones de diseño viables dentro de los lineamientos del sitio institucional.",
     },
     problem: {
-      statement: "Migrar sin perder el hilo. Rediseñar sin perder la marca.",
+      statement: "Mucha oferta académica. Poca claridad para elegir.",
       painPoints: [
-        "El sitio existente estaba construido sobre una plataforma difícil de actualizar para el equipo de contenido.",
-        "La identidad visual había evolucionado pero el sitio no reflejaba la marca actual de AIEP.",
-        "Múltiples áreas tenían criterios distintos sobre qué debía priorizar el nuevo sitio.",
+        "Oferta de cursos y diplomados poco estructurada desde la mirada del usuario.",
+        "Dificultad para comprender diferencias, modalidades y beneficios entre programas.",
+        "Experiencia digital que no acompañaba la proyección estratégica del área.",
       ],
     },
     roleDetail: [
       {
-        title: "Diseño en Figma",
+        title: "Discovery",
         description:
-          "Rediseñé las pantallas y templates del nuevo sitio en Figma, respetando y evolucionando las brand guidelines de AIEP. Los templates debían ser implementables en HubSpot por Cebra, por lo que consideré las restricciones técnicas del CMS desde el inicio del diseño.",
+          "Participé en el workshop interno con los squads Web y Educación Continua, hice un análisis heurístico de la experiencia digital existente y un benchmark de referentes del rubro para identificar barreras y oportunidades antes de diseñar.",
       },
       {
-        title: "Coordinación con Cebra",
+        title: "Diseño de la solución",
         description:
-          "Una vez aprobados los diseños internamente, los entregaba a Cebra para su implementación en HubSpot. Revisaba cada entrega contra el diseño aprobado, documentaba desviaciones y coordinaba correcciones en los ciclos de sprint.",
+          "Con los insights del discovery definí los criterios de diseño y diseñé la primera maqueta del sitio — inicio, listado de programas y detalle de cada programa — pensada para ordenar la oferta y facilitar la toma de decisiones dentro de un sistema modular y escalable.",
       },
     ],
     process: [
       {
         number: "01",
-        title: "Auditoría del sitio actual",
+        title: "Discovery y levantamiento inicial",
         description:
-          "Relevamiento de todas las páginas, secciones y contenidos existentes. Definición de qué migraba, qué se descartaba y qué era nuevo.",
+          "Antes de diseñar, se hizo un workshop interno con los squads involucrados, un análisis heurístico de la experiencia digital existente y un benchmark de referentes del rubro. De ahí surgieron los insights que guiaron el diseño: ordenar la oferta desde la lógica de la persona usuaria, definir un lenguaje claro y consistente, y pensar una solución escalable dentro de un ecosistema digital mayor.",
         images: [
           {
-            label: "Auditoría — Inventario de páginas",
+            label: "Discovery — Workshop y hallazgos",
             aspectRatio: "16/7",
-            instruction: "Subir: tabla de inventario de contenido, captura del sitio anterior o mapa del sitio existente",
+            instruction: "Subir: tablero del workshop en FigJam, capturas del análisis heurístico o del benchmark realizado",
           },
         ],
       },
       {
         number: "02",
-        title: "Rediseño en Figma",
+        title: "Criterios y propuesta de diseño",
         description:
-          "Diseño de los nuevos templates y páginas respetando las brand guidelines de AIEP. Iteraciones con feedback del equipo interno antes de llegar a Cebra.",
+          "Con esos insights se definieron tres criterios: orden y jerarquía de la oferta, claridad en la propuesta de valor y el lenguaje, y un diseño pensado para escalar. A partir de ahí se diseñó la primera maqueta del sitio, con información clave visible desde el primer contacto y una estructura modular e integrable al ecosistema digital de AIEP.",
         images: [
           {
-            label: "Rediseño — Templates en Figma",
-            aspectRatio: "16/9",
-            instruction: "Subir: capturas de los templates diseñados, vista desktop y mobile de las páginas principales",
-          },
-          {
-            label: "Comparativa — Antes y después del diseño",
+            label: "Propuesta — Flujo en Figma",
             aspectRatio: "16/7",
-            instruction: "Subir: pantalla del sitio anterior vs. el nuevo diseño en Figma, en paralelo",
+            instruction: "Subir: vista de los frames conectados en Figma mostrando el flujo completo del sitio",
           },
         ],
       },
       {
         number: "03",
-        title: "Trabajo en célula ágil",
+        title: "Resultado",
         description:
-          "Sprints de dos semanas con backlog compartido. Cada tarea tenía un responsable y dependencias mapeadas entre áreas.",
+          "La propuesta final incluyó pantallas como el inicio, el listado de programas con filtros por tipo y área, y el detalle de cada programa con la información necesaria para decidir e inscribirse — duración, modalidad, contenidos, valor y certificación.",
         images: [
           {
-            label: "Metodología — Backlog o tablero de sprints",
-            aspectRatio: "16/6",
-            instruction: "Subir: captura del backlog en Azure DevOps, tablero de sprint o estructura de trabajo del equipo",
+            label: "Video — Interacción con el sitio",
+            aspectRatio: "16/9",
+            instruction: "Subir: video navegando el prototipo (filtros, tarjetas de programas, paso de listado a detalle)",
           },
         ],
       },
       {
         number: "04",
-        title: "Coordinación e implementación con Cebra",
+        title: "Estado y próximos pasos",
         description:
-          "Handoff de diseños, revisión de implementaciones en HubSpot, feedback técnico y ciclos de corrección por sprint.",
-        images: [
-          {
-            label: "Coordinación — Entregables a Cebra",
-            aspectRatio: "16/7",
-            instruction: "Subir: specs de Figma, documentación de handoff o capturas de las revisiones de implementación",
-          },
-        ],
+          "La maqueta fue validada a nivel interno y el proyecto fue traspasado a desarrollo a través de un proveedor externo, como parte de una iniciativa mayor de migración del sitio institucional. Seguía en curso — sin implementar aún — al cierre de mi paso por AIEP.",
+        images: [],
       },
     ],
     learnings: {
       metrics: [
-        { value: "5", label: "Áreas coordinadas" },
-        { value: "2 semanas", label: "Por sprint" },
-        { value: "+42", label: "Páginas diseñadas" },
+        { value: "2", label: "Squads coordinados" },
+        { value: "3", label: "Criterios de diseño definidos" },
+        { value: "6 meses", label: "De proyecto" },
       ],
       closing: [
-        "Este proyecto dejó en claro que diseñar para un CMS implica entender sus restricciones antes de abrir Figma. También quedó de manifiesto cómo navegar decisiones de diseño en un entorno de múltiples stakeholders con criterios distintos: el área comercial prioriza conversión, TI prioriza viabilidad técnica, y diseño debe encontrar la solución que funcione para todos.",
-        "El proceso en sí —la coordinación, la metodología, las decisiones tomadas— fue tan valioso como el resultado.",
+        "Este proyecto reforzó la importancia de partir por entender a la persona usuaria antes de diseñar: el discovery permitió tomar decisiones con base en evidencia y no en supuestos. También evidenció el valor de diseñar pensando en la escalabilidad, ya que esta solución debía integrarse a un ecosistema digital mucho más grande que un solo sitio.",
+        "Por confidencialidad institucional, este caso y sus capturas se presentan en una versión anonimizada del proyecto real.",
       ],
     },
   },

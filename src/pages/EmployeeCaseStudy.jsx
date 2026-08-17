@@ -108,7 +108,7 @@ const EmployeeCaseStudy = ({ slug: slugProp }) => {
       </div>
       {data.subprojects && (
         <div ref={setRef("subprojects")} data-section="subprojects">
-          <ECSubprojects intro={data.subprojects.intro} items={data.subprojects.items} />
+          <ECSubprojects title={data.subprojects.title} intro={data.subprojects.intro} items={data.subprojects.items} />
         </div>
       )}
       <div ref={setRef("learnings")} data-section="learnings">
