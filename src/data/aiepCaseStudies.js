@@ -180,7 +180,7 @@ export const aiepCaseStudies = {
     },
     learnings: {
       metrics: [
-        { value: "4", label: "Subproyectos liderados" },
+        { value: "4", label: "Subproyectos de diseño UX" },
         { value: "5", label: "Proveedores coordinados" },
         { value: "8 meses", label: "De proyecto" },
       ],
