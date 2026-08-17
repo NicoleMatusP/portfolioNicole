@@ -5,6 +5,8 @@ import misSolicitudesPhoto from "../assets/aiep/mis-solicitudes-photo.jpg"
 import simuladorBecasPhoto from "../assets/aiep/card-simulador-becas.jpg"
 import recorridoPhoto from "../assets/aiep/card-recorrido.jpg"
 import certificadosEspecialesPhoto from "../assets/aiep/card-certificados-especiales.jpg"
+import educacionContinuaVideo from "../assets/aiep/educacion-continua-video.mp4"
+import educacionContinuaFlujo from "../assets/aiep/flujo-educacion-continua.jpg"
 
 export const aiepCaseStudies = {
   "aiep-intranet": {
@@ -242,8 +244,9 @@ export const aiepCaseStudies = {
         images: [
           {
             label: "Propuesta — Flujo en Figma",
-            aspectRatio: "16/7",
+            aspectRatio: "1900/929",
             instruction: "Subir: vista de los frames conectados en Figma mostrando el flujo completo del sitio",
+            src: educacionContinuaFlujo,
           },
         ],
       },
@@ -255,8 +258,9 @@ export const aiepCaseStudies = {
         images: [
           {
             label: "Video — Interacción con el sitio",
-            aspectRatio: "16/9",
+            aspectRatio: "1600/960",
             instruction: "Subir: video navegando el prototipo (filtros, tarjetas de programas, paso de listado a detalle)",
+            src: educacionContinuaVideo,
           },
         ],
       },
