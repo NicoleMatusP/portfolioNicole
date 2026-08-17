@@ -2,6 +2,9 @@ import designSystem from "../assets/aiep/design-system.jpg"
 import prototipoPago from "../assets/aiep/prototipo-pago.mp4"
 import prototipoMisSolicitudes from "../assets/aiep/prototipo-mis-solicitudes.jpg"
 import misSolicitudesPhoto from "../assets/aiep/mis-solicitudes-photo.jpg"
+import simuladorBecasPhoto from "../assets/aiep/card-simulador-becas.jpg"
+import recorridoPhoto from "../assets/aiep/card-recorrido.jpg"
+import certificadosEspecialesPhoto from "../assets/aiep/card-certificados-especiales.jpg"
 
 export const aiepCaseStudies = {
   "aiep-intranet": {
@@ -137,6 +140,7 @@ export const aiepCaseStudies = {
           image: {
             label: "Simulador de Becas y CAE",
             instruction: "Subir: captura del flujo del simulador mostrando el resultado de la proyección de financiamiento",
+            src: simuladorBecasPhoto,
           },
         },
         {
@@ -147,6 +151,7 @@ export const aiepCaseStudies = {
           image: {
             label: "Recorridos 360°",
             instruction: "Subir: captura del visor de recorrido 360° o mockup del módulo mostrando una sede",
+            src: recorridoPhoto,
           },
         },
         {
@@ -168,6 +173,7 @@ export const aiepCaseStudies = {
           image: {
             label: "Certificados especiales",
             instruction: "Subir: captura del flujo de solicitud de un certificado especial, paso de selección de tipo",
+            src: certificadosEspecialesPhoto,
           },
         },
       ],
