@@ -188,6 +188,7 @@ export const aiepCaseStudies = {
       "Ordenar la oferta de cursos y diplomados y facilitar la decisión de quienes buscan continuar su formación.",
     tags: ["Discovery", "UX/UI", "HubSpot"],
     color: "#0D1F3C",
+    heroGradient: "radial-gradient(circle at 85% 15%, #21447D 0%, #0D1F3C 55%)",
     year: "2025 — 2026",
     role: "UX/UI Designer",
     tools: ["Figma", "HubSpot"],
@@ -228,13 +229,31 @@ export const aiepCaseStudies = {
         title: "Discovery y levantamiento inicial",
         description:
           "Antes de diseñar, se hizo un workshop interno con los squads involucrados, un análisis heurístico de la experiencia digital existente y un benchmark de referentes del rubro. De ahí surgieron los insights que guiaron el diseño: ordenar la oferta desde la lógica de la persona usuaria, definir un lenguaje claro y consistente, y pensar una solución escalable dentro de un ecosistema digital mayor.",
-        images: [
-          {
-            label: "Discovery — Workshop y hallazgos",
-            aspectRatio: "16/7",
-            instruction: "Subir: tablero del workshop en FigJam, capturas del análisis heurístico o del benchmark realizado",
-          },
-        ],
+        synthesis: {
+          eyebrow: "Discovery — Metodología y hallazgos",
+          columns: [
+            {
+              title: "Cómo se hizo",
+              subtitle: "Antes de diseñar",
+              rows: [
+                { number: "01", label: "Workshop interno con los squads involucrados" },
+                { number: "02", label: "Análisis heurístico de la experiencia digital existente" },
+                { number: "03", label: "Benchmark de referentes del rubro" },
+                { number: "04", label: "Alineamiento de visión y objetivos del área" },
+              ],
+            },
+            {
+              title: "Insights clave",
+              subtitle: "Qué guio el diseño",
+              rows: [
+                { number: "01", label: "Ordenar la oferta desde la lógica de la persona usuaria" },
+                { number: "02", label: "Definir un lenguaje claro y consistente" },
+                { number: "03", label: "Pensar una solución escalable dentro de un ecosistema mayor" },
+              ],
+            },
+          ],
+        },
+        images: [],
       },
       {
         number: "02",

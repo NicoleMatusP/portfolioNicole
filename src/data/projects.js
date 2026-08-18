@@ -1,3 +1,5 @@
+import projectAiep from "../assets/aiep/proyecto-aiep.jpg"
+
 export const projects = [
   {
     slug: "aiep",
@@ -8,6 +10,7 @@ export const projects = [
       "Modernización de la intranet estudiantil y migración del sitio institucional a HubSpot.",
     tags: ["Design System", "Rediseño Web", "Metodología Ágil"],
     color: "#1A1A2E",
+    image: projectAiep,
     year: "2025 — 2026",
     role: "UX/UI Designer",
     badge: "2 casos de estudio",

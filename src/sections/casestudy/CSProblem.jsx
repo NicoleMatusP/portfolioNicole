@@ -32,7 +32,12 @@ const CSProblem = ({ content, italic = false }) => {
           <ul className="cs-problem__pain-points">
             {content.painPoints.map((point) => (
               <motion.li {...revealProps} key={point}>
-                {point}
+                <span className="cs-problem__pain-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span>{point}</span>
               </motion.li>
             ))}
           </ul>

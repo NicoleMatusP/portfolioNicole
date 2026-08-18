@@ -626,6 +626,7 @@ h1, h2, h3, h4 {
   width: 100%;
   aspect-ratio: 16 / 9;
   position: relative;
+  overflow: hidden;
   transition: transform 0.5s var(--ease-editorial);
 }
 
@@ -1017,6 +1018,9 @@ h1, h2, h3, h4 {
 }
 
 .cs-problem__pain-points li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   padding-block: 18px;
   border-bottom: 1px solid var(--color-line);
   font-size: 17px;
@@ -1024,6 +1028,18 @@ h1, h2, h3, h4 {
 
 .cs-problem__pain-points li:first-child {
   border-top: 1px solid var(--color-line);
+}
+
+.cs-problem__pain-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-ink);
 }
 
 /* Research */
@@ -1353,6 +1369,15 @@ h1, h2, h3, h4 {
   gap: 32px;
   margin-top: 32px;
   margin-bottom: 48px;
+}
+
+.cs-results__metric::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: 16px;
 }
 
 .cs-results__value {

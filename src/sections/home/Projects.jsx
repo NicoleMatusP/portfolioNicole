@@ -16,7 +16,14 @@ const ProjectCard = ({ project, size = "half" }) => (
       className="project-card__link"
       data-cursor-hover
     >
-      <div className="project-card__image" style={{ background: project.color }}>
+      <div
+        className="project-card__image"
+        style={
+          project.image
+            ? { backgroundImage: `url(${project.image})`, backgroundSize: "cover", backgroundPosition: "center" }
+            : { background: project.color }
+        }
+      >
         {project.badge && <span className="pill project-card__badge">{project.badge}</span>}
       </div>
       <div className="project-card__meta">

@@ -1,5 +1,5 @@
 import cardProyectoIntranet from "../assets/aiep/card-proyecto-intranet.jpg"
-import cardEducacionContinua from "../assets/aiep/educacion-continua-inicio.jpg"
+import cardEducacionContinua from "../assets/aiep/educacion-continua-proyecto.jpg"
 
 export const companies = {
   aiep: {
