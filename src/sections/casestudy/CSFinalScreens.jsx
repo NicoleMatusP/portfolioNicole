@@ -8,14 +8,16 @@ const revealProps = {
   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
 }
 
-const screens = [
+const defaultScreens = [
   { label: "Pantalla 1", instruction: "Aquí va: vista de inicio / dashboard principal del producto" },
   { label: "Pantalla 2", instruction: "Aquí va: flujo principal en su paso más representativo" },
   { label: "Pantalla 3", instruction: "Aquí va: estado de confirmación o éxito del flujo principal" },
   { label: "Pantalla 4", instruction: "Aquí va: vista de detalle o configuración secundaria" },
 ]
 
-const CSFinalScreens = ({ project }) => {
+const CSFinalScreens = ({ project, content }) => {
+  const screens = content?.screens || defaultScreens
+
   return (
     <section className="section cs-final-screens">
       <div className="container">
@@ -28,13 +30,14 @@ const CSFinalScreens = ({ project }) => {
             label={`Pantalla principal — ${project.name}`}
             aspectRatio="16/9"
             instruction="Aquí va: la pantalla hero / principal del producto terminado, en alta resolución"
+            src={content?.hero}
           />
         </motion.div>
 
         <div className="cs-final-screens__grid">
           {screens.map((s) => (
             <motion.div {...revealProps} key={s.label} className="cs-final-screens__item">
-              <ImagePlaceholder label={s.label} aspectRatio="3/4" instruction={s.instruction} />
+              <ImagePlaceholder label={s.label} aspectRatio="3/4" instruction={s.instruction} src={s.src} />
               <p className="cs-final-screens__caption">{s.instruction}</p>
             </motion.div>
           ))}

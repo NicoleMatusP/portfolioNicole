@@ -38,6 +38,7 @@ const CSBenchmark = ({ content }) => {
             label="Benchmark competitivo"
             aspectRatio="16/8"
             instruction="Aquí van: capturas de pantalla del benchmark, tabla comparativa"
+            src={content.image}
           />
         </motion.div>
       </div>

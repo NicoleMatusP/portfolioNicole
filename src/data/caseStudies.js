@@ -1,73 +1,143 @@
+import pheroLandingHero from "../assets/phero/phero-landing-hero.jpg"
+import pheroCardTecnologia from "../assets/phero/phero-card-tecnologia.jpg"
+import pheroCardOperacion from "../assets/phero/phero-card-operacion.jpg"
+import pheroMobileOrdenes from "../assets/phero/phero-mobile-ordenes.jpg"
+import pheroPartners from "../assets/phero/phero-partners.jpg"
+import pheroPartnersPortrait from "../assets/phero/phero-partners-portrait.jpg"
+import pheroDsTipografia from "../assets/phero/phero-ds-tipografia.jpg"
+import pheroDsColores from "../assets/phero/phero-ds-colores.jpg"
+import pheroDsIconos from "../assets/phero/phero-ds-iconos.jpg"
+import pheroDashboard from "../assets/phero/phero-dashboard.jpg"
+
 export const caseStudyContent = {
   "phero-app": {
     hero: {
-      challenge: "Diseñar y lanzar desde cero una app de bienestar emocional que generara un hábito diario real.",
+      challenge:
+        "Diseñar la página web y el sistema de diseño completo — desktop y mobile — de una startup logística que integraba couriers independientes en una sola red de distribución.",
     },
     overview: {
       context:
-        "Phero nació como un producto sin base de usuarios ni validación previa: una app móvil de bienestar emocional que debía competir por la atención diaria de las personas en un mercado saturado de apps de mindfulness. El desafío no era solo diseñar pantallas, sino definir de cero qué tipo de producto merecía ser construido.",
+        "Phero nació en 2023 en Santiago como una plataforma que integraba los servicios de distintas empresas de delivery y courier de Chile —desde operadores locales hasta actores como DHL o 99minutos— en una sola red de distribución descentralizada. En lugar de depender de la capacidad fija de un solo transportista, la propuesta permitía a marcas de e-commerce escalar sus entregas absorbiendo demanda entre los distintos operadores integrados a la plataforma. Se trabajó directamente con el equipo fundador de la startup durante aproximadamente un año, a cargo del diseño de la página web y de todo el sistema de diseño del software, tanto en su versión desktop como mobile.",
     },
     problem: {
-      statement: "Diseñar un hábito diario en una categoría donde la mayoría de las apps se abandonan en la primera semana.",
+      statement:
+        "Las empresas de delivery locales no podían escalar al ritmo del e-commerce, y eso se traducía en cobertura insuficiente y ventas perdidas para las marcas que dependían de ellas.",
       context:
-        "[Nicole: agregar aquí el detalle específico del problema de negocio y de usuario que dio origen a Phero — qué gap de mercado se identificó y qué fricciones tenían las alternativas existentes.]",
+        "En Latinoamérica se generan cerca de 25 millones de envíos al día, y el 72% de esas entregas las realizan empresas de delivery locales cuya infraestructura es rígida: no se ajusta a los picos de demanda del e-commerce. En Chile, donde las ventas online ya representan el 14% del retail, eventos como el Cyber Monday presionan aún más a operadores que trabajan al límite de su capacidad.",
       painPoints: [
-        "[Pain point 1 — completar con hallazgo real de research]",
-        "[Pain point 2 — completar con hallazgo real de research]",
+        "Los couriers coordinaban cada despacho de forma manual, sin visibilidad compartida del estado de la carga entre bodega y ruta.",
+        "El personal de bodega no tenía forma de anticipar cuándo un transportista no daría abasto para la demanda del día.",
+        "Las marcas perdían ventas cuando su transportista principal no tenía cobertura, sin un canal simple para derivar el excedente a otro operador.",
       ],
     },
     research: {
       methods: [
-        { name: "Entrevistas usuarios", description: "[Completar: cuántas, a quién, qué se buscaba entender]" },
-        { name: "Encuestas", description: "[Completar: tamaño de muestra y foco de la encuesta]" },
-        { name: "Benchmark", description: "[Completar: qué apps de bienestar se analizaron]" },
+        {
+          name: "Entrevistas en terreno",
+          description: "Conversaciones con couriers y personal de bodega sobre los cuellos de botella del despacho diario.",
+        },
+        {
+          name: "Análisis de mercado",
+          description: "Datos de crecimiento del e-commerce y fragmentación de las empresas de delivery en Chile.",
+        },
       ],
       findings: [
-        "[Hallazgo 1 — completar con dato real]",
-        "[Hallazgo 2 — completar con dato real]",
-        "[Hallazgo 3 — completar con dato real]",
+        "La coordinación entre bodega y ruta dependía de canales informales, sin un registro compartido del estado de cada pedido.",
+        "La capacidad de reparto era fija y no se ajustaba a los picos reales de demanda del día.",
       ],
     },
     benchmark: {
-      intro: "[Nicole: describir aquí qué apps de bienestar emocional se analizaron y con qué criterio.]",
+      intro:
+        "Antes de definir la arquitectura del producto, se compararon los tres modelos con los que una marca puede resolver su última milla.",
+      image: pheroPartners,
       competitors: [
-        { name: "[Competidor 1]", category: "[Categoría]", observations: ["[Observación]", "[Observación]"] },
-        { name: "[Competidor 2]", category: "[Categoría]", observations: ["[Observación]", "[Observación]"] },
+        {
+          name: "Transportista único",
+          category: "Ej. 99minutos, DHL, Recibelo",
+          observations: [
+            "Cobertura y capacidad fijas, sin margen para picos de demanda.",
+            "Integración 1:1 por marca; no absorbe volumen excedente hacia otro operador.",
+          ],
+        },
+        {
+          name: "Flota propia",
+          category: "Operación interna de última milla",
+          observations: [
+            "Alto costo fijo de infraestructura, vehículos y personal.",
+            "Escalar exige inversión de capital, no solo más demanda.",
+          ],
+        },
+        {
+          name: "Red integrada — modelo Phero",
+          category: "Plataforma multi-courier",
+          observations: [
+            "Combina la capacidad de varios operadores locales bajo una sola tecnología.",
+            "Permite redistribuir demanda entre couriers según cobertura y disponibilidad real.",
+          ],
+        },
       ],
     },
     definition: {
       persona: {
-        name: "[Nombre del arquetipo]",
-        description: "[Completar descripción del usuario principal de Phero]",
-        frustrations: ["[Frustración 1]", "[Frustración 2]", "[Frustración 3]"],
-        goals: ["[Objetivo 1]", "[Objetivo 2]", "[Objetivo 3]"],
+        name: "Encargado de operaciones logísticas",
+        description:
+          "Gestiona el despacho diario de una marca o empresa de delivery entre distintas bodegas y couriers, y necesita una sola vista confiable de dónde está cada pedido.",
+        frustrations: [
+          "No tiene visibilidad en tiempo real de qué pedidos están en ruta, en bodega o con incidencias.",
+          "Depende de canales manuales (llamadas, planillas, WhatsApp) para coordinar distintos transportistas.",
+          "No puede anticipar cuándo la capacidad de un courier no alcanzará para cubrir la demanda del día.",
+        ],
+        goals: [
+          "Centralizar la operación de despacho en una sola herramienta.",
+          "Redistribuir el excedente de pedidos a otros couriers de la red sin fricción.",
+          "Tener trazabilidad end-to-end de cada entrega, desde bodega hasta destino.",
+        ],
       },
-      hmw: "¿Cómo podríamos ayudar a las personas a construir un hábito emocional sostenible sin que se sienta una obligación más?",
+      hmw: "¿Cómo podríamos darle a un operador logístico una sola vista para coordinar múltiples couriers sin perder trazabilidad?",
     },
     architecture: {
-      intro: "[Nicole: completar con las decisiones de estructura y navegación tomadas para Phero.]",
-      decisions: ["[Decisión clave 1]", "[Decisión clave 2]"],
-    },
-    wireframes: {
-      intro: "[Nicole: completar con el proceso de ideación y exploración de wireframes.]",
-      note: "[Nota editorial sobre iteraciones descartadas]",
+      intro:
+        "El software de Phero debía servir a distintos roles sobre una misma base operativa: administradores de la marca, couriers en ruta y personal de bodega. La arquitectura de información se organizó a partir de esos tres roles, priorizando el mapa de seguimiento en tiempo real como vista central — la necesidad más repetida en las conversaciones con couriers y personal de bodega.",
+      decisions: [
+        "Navegación lateral fija con acceso directo a Dashboard, Pedidos, Bodegas y Configuración, priorizando las tareas de uso diario por sobre la exploración.",
+        "El seguimiento de entregas se diseñó como mapa en tiempo real, no como tabla, para que la trazabilidad fuera visual e inmediata.",
+        "Se definieron estados y permisos distintos por rol — administrador, courier y bodega — de modo que cada perfil viera solo la información relevante para su tarea.",
+      ],
     },
     designSystem: {
-      intro: "[Nicole: completar con la descripción del sistema visual construido para Phero.]",
-      atomicDesign: false,
-      componentCount: "[Cantidad de componentes]",
-      tokenCount: "[Cantidad de tokens]",
+      intro:
+        "Se construyó desde cero el sistema de diseño de Phero, pensado para sostener tanto la página web de la marca como el software desktop y mobile. Se definieron paleta, tipografía, iconografía propia y estados de componentes para los distintos roles del producto, incluyendo flujos específicos como el chat entre roles, el diálogo de optimización de ruta, el escaneo de paquetes y el resumen de pagos para couriers.",
+      atomicDesign: true,
+      componentCount: "Componentes organizados en átomos, moléculas y organismos",
+      tokenCount: "Tokens de color, tipografía y espaciado documentados",
+      images: {
+        palette: pheroDsColores,
+        typography: pheroDsTipografia,
+        components: pheroDsIconos,
+      },
     },
     prototype: {
-      intro: "[Nicole: completar con el alcance del prototipo construido y qué se validó con él.]",
+      intro:
+        "El prototipo en Figma cubrió los flujos principales del software: creación y seguimiento de pedidos, coordinación entre bodegas, y el flujo del courier en ruta, incluyendo el escaneo de paquetes y el resumen de pago por entregas realizadas.",
+    },
+    finalScreens: {
+      hero: pheroLandingHero,
+      screens: [
+        { label: "Tecnología", src: pheroCardTecnologia, instruction: "Módulo de integración tecnológica del landing page" },
+        { label: "Operación", src: pheroCardOperacion, instruction: "Módulo de incorporación operativa a la red de distribución" },
+        { label: "Pedidos — mobile", src: pheroMobileOrdenes, instruction: "Vista de pedidos del courier en la versión mobile" },
+        { label: "Red de partners", src: pheroPartnersPortrait, instruction: "Operadores logísticos integrados a la red" },
+      ],
     },
     results: {
       metrics: [
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
+        { value: "20% MoM", label: "Crecimiento orgánico mensual de la operación mientras la plataforma diseñada estaba en uso" },
+        { value: "3", label: "Roles de usuario cubiertos por el sistema de diseño: administrador, courier y bodega" },
+        { value: "0 → 1", label: "Página web y sistema de diseño completo, construidos desde cero en un año" },
       ],
-      closing: "[Nicole: completar con aprendizajes del proyecto y qué harías diferente.]",
+      closing:
+        "Phero cerró operaciones cerca de un año después de este proyecto, tras no lograr sostener el negocio en el tiempo — un desenlace frecuente entre startups tempranas de logística en Latinoamérica. Diseñar en solitario para un software B2B naciente significó tomar decisiones con información incompleta, sostener consistencia visual sin un equipo de diseño detrás, y traducir procesos operativos reales —de couriers y personal de bodega— en decisiones de interfaz, todo mientras el producto y el negocio se definían en paralelo.",
+      image: pheroDashboard,
     },
   },
 

@@ -27,13 +27,13 @@ const CSDesignSystem = ({ content }) => {
 
         <div className="cs-design-system__grid">
           <motion.div {...revealProps}>
-            <ImagePlaceholder label="Paleta de colores" aspectRatio="4/3" instruction="Aquí va: swatch de la paleta de colores con sus valores hex" />
+            <ImagePlaceholder label="Paleta de colores" aspectRatio="4/3" instruction="Aquí va: swatch de la paleta de colores con sus valores hex" src={content.images?.palette} />
           </motion.div>
           <motion.div {...revealProps}>
-            <ImagePlaceholder label="Tipografía" aspectRatio="4/3" instruction="Aquí va: escala tipográfica con pesos y tamaños usados" />
+            <ImagePlaceholder label="Tipografía" aspectRatio="4/3" instruction="Aquí va: escala tipográfica con pesos y tamaños usados" src={content.images?.typography} />
           </motion.div>
           <motion.div {...revealProps}>
-            <ImagePlaceholder label="Componentes base" aspectRatio="4/3" instruction="Aquí va: grid de componentes base del design system (botones, inputs, cards)" />
+            <ImagePlaceholder label="Componentes base" aspectRatio="4/3" instruction="Aquí va: grid de componentes base del design system (botones, inputs, cards)" src={content.images?.components} />
           </motion.div>
         </div>
       </div>

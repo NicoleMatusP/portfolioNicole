@@ -34,6 +34,7 @@ const CSResults = ({ content }) => {
             label="Producto en contexto"
             aspectRatio="16/9"
             instruction="Aquí van: capturas del producto live o pantallas finales en contexto de uso real"
+            src={content.image}
           />
         </motion.div>
       </div>

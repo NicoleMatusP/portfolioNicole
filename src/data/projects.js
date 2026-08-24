@@ -1,4 +1,5 @@
 import projectAiep from "../assets/aiep/proyecto-aiep.jpg"
+import projectPhero from "../assets/phero/fondo_web_phero.jpg"
 
 export const projects = [
   {
@@ -7,7 +8,7 @@ export const projects = [
     number: "01",
     name: "AIEP",
     description:
-      "Modernización de la intranet estudiantil y migración del sitio institucional a HubSpot.",
+      "Estandarización de la intranet estudiantil y diseño del sitio web de Educación Continua.",
     tags: ["Design System", "Rediseño Web", "Metodología Ágil"],
     color: "#1A1A2E",
     image: projectAiep,
@@ -18,15 +19,18 @@ export const projects = [
   {
     slug: "phero-app",
     number: "02",
-    name: "Phero App",
-    description: "Aplicación móvil de bienestar emocional. De 0 a lanzamiento.",
-    tags: ["Product Design", "Prototyping", "React handoff"],
-    color: "#2D1B4E",
-    year: "2024",
+    name: "Phero",
+    description: "Plataforma de última milla que integra couriers independientes en una red de distribución descentralizada.",
+    tags: ["UX/UI Design", "Design System", "0 a 1"],
+    color: "#12245C",
+    image: projectPhero,
+    gradient:
+      "linear-gradient(200deg, #64627c 0%, #616c86 15%, #694e67 40%, #702b43 55%, #272063 75%, #05257a 100%)",
+    year: "2023 — 2024",
     role: "UX/UI Designer",
     company: "Phero",
-    tools: ["Figma", "Maze", "Notion"],
-    duration: "4 meses",
+    tools: ["Figma"],
+    duration: "1 año",
   },
   {
     slug: "hoktus-dashboard",

@@ -36,7 +36,8 @@ const CaseStudy = () => {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
   const content = caseStudyContent[slug]
-  const [activeId, setActiveId] = useState(progressSteps[0].id)
+  const steps = progressSteps.filter((step) => step.id !== "wireframes" || content?.wireframes)
+  const [activeId, setActiveId] = useState(steps[0].id)
   const sectionRefs = useRef({})
 
   useEffect(() => {
@@ -78,7 +79,7 @@ const CaseStudy = () => {
         breadcrumbs={[{ label: "Inicio", to: "/" }, { label: project.name }]}
       />
 
-      <CaseStudySideNav steps={progressSteps} activeId={activeId} />
+      <CaseStudySideNav steps={steps} activeId={activeId} />
 
       <div ref={setRef("overview")} data-section="overview">
         <CSOverview project={project} content={content.overview} />
@@ -98,12 +99,14 @@ const CaseStudy = () => {
       <div ref={setRef("architecture")} data-section="architecture">
         <CSArchitecture content={content.architecture} />
       </div>
-      <div ref={setRef("wireframes")} data-section="wireframes">
-        <CSWireframes content={content.wireframes} />
-      </div>
+      {content.wireframes && (
+        <div ref={setRef("wireframes")} data-section="wireframes">
+          <CSWireframes content={content.wireframes} />
+        </div>
+      )}
       <div ref={setRef("design-system")} data-section="design-system">
         <CSDesignSystem content={content.designSystem} />
-        <CSFinalScreens project={project} />
+        <CSFinalScreens project={project} content={content.finalScreens} />
       </div>
       <div ref={setRef("prototype")} data-section="prototype">
         <CSPrototype content={content.prototype} />

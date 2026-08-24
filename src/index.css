@@ -522,13 +522,13 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 1100px) {
   .case-study section:not(.cs-hero) > .container {
     padding-left: calc(var(--container-padding) + 190px);
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1099px) {
   .cs-sidenav {
     display: none;
   }
