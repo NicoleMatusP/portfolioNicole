@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
 .font-display-italic {
   font-family: var(--font-display);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .eyebrow {
@@ -233,12 +233,15 @@ h1, h2, h3, h4 {
 .custom-cursor--hover {
   width: 64px;
   height: 64px;
-  background: #FFFFFF;
-  border-color: #FFFFFF;
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  mix-blend-mode: normal;
 }
 
 .custom-cursor--hover .custom-cursor__label {
   opacity: 1;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
 }
 
 /* Nav */
@@ -1042,6 +1045,36 @@ h1, h2, h3, h4 {
   color: var(--color-ink);
 }
 
+.cs-problem__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 8px 0 40px;
+}
+
+.cs-problem__stat {
+  border-top: 2px solid var(--color-accent);
+  padding-top: 16px;
+}
+
+.cs-problem__stat-value {
+  font-size: clamp(30px, 4vw, 42px);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cs-problem__stat-label {
+  color: var(--color-muted);
+  font-size: 14px;
+  max-width: 220px;
+}
+
+@media (max-width: 860px) {
+  .cs-problem__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Research */
 .cs-research__title {
   font-size: clamp(24px, 3vw, 32px);
@@ -1160,6 +1193,13 @@ h1, h2, h3, h4 {
 }
 
 /* Definition */
+.cs-definition__intro {
+  color: var(--color-muted);
+  max-width: 640px;
+  margin-top: 16px;
+  font-size: 17px;
+}
+
 .cs-definition__persona {
   border: 1px solid var(--color-line);
   padding: 40px;
@@ -1193,19 +1233,55 @@ h1, h2, h3, h4 {
 }
 
 .cs-definition__persona-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   font-size: 15px;
   padding-block: 8px;
 }
 
+.cs-definition__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 50%;
+}
+
+.cs-definition__icon--frustration {
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+}
+
+.cs-definition__icon--goal {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
 .cs-definition__hmw {
-  background: var(--color-surface);
-  padding: 56px 40px;
+  background: var(--color-ink);
+  padding: 64px 40px;
   margin-top: 32px;
   text-align: center;
 }
 
+.cs-definition__hmw-label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+}
+
 .cs-definition__hmw p {
-  font-size: clamp(24px, 3.5vw, 40px);
+  color: var(--color-bg);
+  font-size: clamp(26px, 3.5vw, 42px);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -1232,18 +1308,121 @@ h1, h2, h3, h4 {
   font-size: 17px;
 }
 
+.cs-architecture__title {
+  font-size: clamp(22px, 2.6vw, 28px);
+  margin-bottom: 24px;
+}
+
+.cs-architecture__title--spaced {
+  margin-top: 56px;
+}
+
+.cs-architecture__roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 8px 0 40px;
+}
+
+.cs-architecture__role-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: 32px;
+}
+
+.cs-architecture__role-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-ink);
+  margin-bottom: 24px;
+}
+
+.cs-architecture__role-name {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.cs-architecture__role-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+
+.cs-architecture__role-value {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.cs-architecture__role-value:last-child {
+  margin-bottom: 0;
+}
+
+.cs-architecture__role-connector {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  width: 40px;
+  height: 1px;
+  background: var(--color-line);
+  z-index: 1;
+}
+
+.cs-architecture__role-connector::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 860px) {
+  .cs-architecture__roles {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cs-architecture__role-connector {
+    display: none;
+  }
+}
+
 .cs-architecture__decisions {
   margin-top: 32px;
 }
 
 .cs-architecture__decisions li {
-  padding-block: 18px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: 20px;
   border-bottom: 1px solid var(--color-line);
   font-size: 16px;
 }
 
 .cs-architecture__decisions li:first-child {
   border-top: 1px solid var(--color-line);
+}
+
+.cs-architecture__decision-icon {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-muted);
+  width: 32px;
 }
 
 /* Wireframes */

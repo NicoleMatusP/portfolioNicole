@@ -28,6 +28,17 @@ const CSProblem = ({ content, italic = false }) => {
           </motion.p>
         )}
 
+        {content.stats && content.stats.length > 0 && (
+          <div className="cs-problem__stats">
+            {content.stats.map((stat) => (
+              <motion.div {...revealProps} key={stat.label} className="cs-problem__stat">
+                <span className="cs-problem__stat-value font-display">{stat.value}</span>
+                <p className="cs-problem__stat-label">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        )}
+
         {content.painPoints && content.painPoints.length > 0 && (
           <ul className="cs-problem__pain-points">
             {content.painPoints.map((point) => (

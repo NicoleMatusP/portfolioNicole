@@ -2,7 +2,6 @@ import pheroLandingHero from "../assets/phero/phero-landing-hero.jpg"
 import pheroCardTecnologia from "../assets/phero/phero-card-tecnologia.jpg"
 import pheroCardOperacion from "../assets/phero/phero-card-operacion.jpg"
 import pheroMobileOrdenes from "../assets/phero/phero-mobile-ordenes.jpg"
-import pheroPartners from "../assets/phero/phero-partners.jpg"
 import pheroPartnersPortrait from "../assets/phero/phero-partners-portrait.jpg"
 import pheroDsTipografia from "../assets/phero/phero-ds-tipografia.jpg"
 import pheroDsColores from "../assets/phero/phero-ds-colores.jpg"
@@ -22,8 +21,13 @@ export const caseStudyContent = {
     problem: {
       statement:
         "Las empresas de delivery locales no podían escalar al ritmo del e-commerce, y eso se traducía en cobertura insuficiente y ventas perdidas para las marcas que dependían de ellas.",
-      context:
-        "En Latinoamérica se generan cerca de 25 millones de envíos al día, y el 72% de esas entregas las realizan empresas de delivery locales cuya infraestructura es rígida: no se ajusta a los picos de demanda del e-commerce. En Chile, donde las ventas online ya representan el 14% del retail, eventos como el Cyber Monday presionan aún más a operadores que trabajan al límite de su capacidad.",
+      context: "La brecha entre demanda y capacidad ya es medible, tanto en Latinoamérica como en Chile:",
+      stats: [
+        { value: "25M", label: "Envíos al día en Latinoamérica" },
+        { value: "72%", label: "Los realizan empresas de delivery locales" },
+        { value: "14%", label: "Del retail chileno ya es venta online" },
+        { value: "4,4M", label: "Transacciones en un solo Cyber Monday en Chile" },
+      ],
       painPoints: [
         "Los couriers coordinaban cada despacho de forma manual, sin visibilidad compartida del estado de la carga entre bodega y ruta.",
         "El personal de bodega no tenía forma de anticipar cuándo un transportista no daría abasto para la demanda del día.",
@@ -46,38 +50,8 @@ export const caseStudyContent = {
         "La capacidad de reparto era fija y no se ajustaba a los picos reales de demanda del día.",
       ],
     },
-    benchmark: {
-      intro:
-        "Antes de definir la arquitectura del producto, se compararon los tres modelos con los que una marca puede resolver su última milla.",
-      image: pheroPartners,
-      competitors: [
-        {
-          name: "Transportista único",
-          category: "Ej. 99minutos, DHL, Recibelo",
-          observations: [
-            "Cobertura y capacidad fijas, sin margen para picos de demanda.",
-            "Integración 1:1 por marca; no absorbe volumen excedente hacia otro operador.",
-          ],
-        },
-        {
-          name: "Flota propia",
-          category: "Operación interna de última milla",
-          observations: [
-            "Alto costo fijo de infraestructura, vehículos y personal.",
-            "Escalar exige inversión de capital, no solo más demanda.",
-          ],
-        },
-        {
-          name: "Red integrada — modelo Phero",
-          category: "Plataforma multi-courier",
-          observations: [
-            "Combina la capacidad de varios operadores locales bajo una sola tecnología.",
-            "Permite redistribuir demanda entre couriers según cobertura y disponibilidad real.",
-          ],
-        },
-      ],
-    },
     definition: {
+      hideImage: true,
       persona: {
         name: "Encargado de operaciones logísticas",
         description:
@@ -98,6 +72,23 @@ export const caseStudyContent = {
     architecture: {
       intro:
         "El software de Phero debía servir a distintos roles sobre una misma base operativa: administradores de la marca, couriers en ruta y personal de bodega. La arquitectura de información se organizó a partir de esos tres roles, priorizando el mapa de seguimiento en tiempo real como vista central — la necesidad más repetida en las conversaciones con couriers y personal de bodega.",
+      roles: [
+        {
+          name: "Administrador",
+          view: "Dashboard y métricas de servicio",
+          solves: "Visibilidad general de la operación y niveles de servicio por cliente",
+        },
+        {
+          name: "Courier",
+          view: "Mapa con ruta optimizada",
+          solves: "Qué entregar, en qué orden y con qué prioridad",
+        },
+        {
+          name: "Bodega",
+          view: "Estado de pedidos por retirar",
+          solves: "Coordinar con el courier correcto antes de que llegue",
+        },
+      ],
       decisions: [
         "Navegación lateral fija con acceso directo a Dashboard, Pedidos, Bodegas y Configuración, priorizando las tareas de uso diario por sobre la exploración.",
         "El seguimiento de entregas se diseñó como mapa en tiempo real, no como tabla, para que la trazabilidad fuera visual e inmediata.",

@@ -36,7 +36,10 @@ const CaseStudy = () => {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
   const content = caseStudyContent[slug]
-  const steps = progressSteps.filter((step) => step.id !== "wireframes" || content?.wireframes)
+  const steps = progressSteps.filter(
+    (step) =>
+      (step.id !== "wireframes" || content?.wireframes) && (step.id !== "benchmark" || content?.benchmark)
+  )
   const [activeId, setActiveId] = useState(steps[0].id)
   const sectionRefs = useRef({})
 
@@ -90,9 +93,11 @@ const CaseStudy = () => {
       <div ref={setRef("research")} data-section="research">
         <CSResearch content={content.research} />
       </div>
-      <div ref={setRef("benchmark")} data-section="benchmark">
-        <CSBenchmark content={content.benchmark} />
-      </div>
+      {content.benchmark && (
+        <div ref={setRef("benchmark")} data-section="benchmark">
+          <CSBenchmark content={content.benchmark} />
+        </div>
+      )}
       <div ref={setRef("definition")} data-section="definition">
         <CSDefinition content={content.definition} />
       </div>
