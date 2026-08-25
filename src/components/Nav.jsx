@@ -71,7 +71,7 @@ const Nav = () => {
               </a>
             ))}
             <a
-              href="/cv-nicole-matus.pdf"
+              href={`${import.meta.env.BASE_URL}cv-nicole-matus.pdf`}
               target="_blank"
               rel="noreferrer"
               className="nav__link link-underline"
@@ -98,7 +98,7 @@ const Nav = () => {
               {link.label}
             </a>
           ))}
-          <a href="/cv-nicole-matus.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
+          <a href={`${import.meta.env.BASE_URL}cv-nicole-matus.pdf`} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
             CV ↓
           </a>
         </nav>

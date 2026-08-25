@@ -3,8 +3,9 @@ import { motion } from "framer-motion"
 
 const PASSWORD = "figma2react"
 const SESSION_KEY = "portfolio_access"
-// Autocompleta y envía la contraseña sola mientras se itera en los casos protegidos. Quitar antes de publicar.
-const DEV_AUTOFILL = true
+// Autocompleta y envía la contraseña sola mientras se itera en los casos protegidos.
+// Solo activo en desarrollo local (import.meta.env.DEV) — nunca en el build publicado.
+const DEV_AUTOFILL = import.meta.env.DEV
 
 const PasswordGate = ({ children }) => {
   const [granted, setGranted] = useState(() => sessionStorage.getItem(SESSION_KEY) === "granted")

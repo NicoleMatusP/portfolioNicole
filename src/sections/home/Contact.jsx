@@ -48,7 +48,7 @@ const Contact = () => {
           <a href="https://github.com/nicole-matus" target="_blank" rel="noreferrer" className="link-underline">
             GitHub
           </a>
-          <a href="/cv-nicole-matus.pdf" target="_blank" rel="noreferrer" className="link-underline">
+          <a href={`${import.meta.env.BASE_URL}cv-nicole-matus.pdf`} target="_blank" rel="noreferrer" className="link-underline">
             CV ↓
           </a>
         </motion.div>
