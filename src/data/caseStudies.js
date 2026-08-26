@@ -1,6 +1,12 @@
 import pheroDsFull1 from "../assets/phero/phero-ds-full-1.jpg"
 import pheroDsFull2 from "../assets/phero/phero-ds-full-2.jpg"
 import pheroLandingFull from "../assets/phero/phero-landing-full.jpg"
+import banadosDsColores from "../assets/banados/banados-ds-colores.jpg"
+import banadosDsHeadingsDesktop from "../assets/banados/banados-ds-headings-desktop.jpg"
+import banadosDsHeadingsMobile from "../assets/banados/banados-ds-headings-mobile.jpg"
+import banadosDsIconos from "../assets/banados/banados-ds-iconos.jpg"
+import banadosDsParrafos from "../assets/banados/banados-ds-parrafos.jpg"
+import banadosDsLabels from "../assets/banados/banados-ds-labels.jpg"
 
 export const caseStudyContent = {
   "phero-app": {
@@ -182,6 +188,42 @@ export const caseStudyContent = {
         { value: "[Métrica]", label: "[Descripción de la métrica]" },
       ],
       closing: "[Nicole: completar con aprendizajes del proyecto y qué harías diferente.]",
+    },
+  },
+
+  banados: {
+    hero: {
+      challenge:
+        "Diseñar el sistema de diseño de un software interno para digitalizar los procesos de venta, órdenes de compra y cotizaciones de Bañados.",
+    },
+    overview: {
+      context:
+        "Bañados es una empresa chilena fabricante de productos químicos e implementos de aseo industrial y del hogar, con más de cinco décadas de trayectoria y clientes como Nestlé, Agrosuper y Sodexo, operando al por mayor y menor desde su sede en Renca y una sucursal en Puerto Montt. El proyecto consistió en diseñar el sistema de diseño de un software interno para digitalizar sus procesos de venta, emisión de órdenes de compra y cotizaciones, trabajando como UX/UI Designer freelance.",
+    },
+    research: {
+      methods: [
+        {
+          name: "Visitas en terreno",
+          description: "Visitas a las bodegas y oficinas de Bañados para conversar directamente con los stakeholders involucrados en el cambio.",
+        },
+        {
+          name: "Levantamiento de flujos actuales",
+          description: "Registro de los procesos vigentes de venta, emisión de órdenes de compra y cotizaciones, como base para el nuevo software.",
+        },
+      ],
+    },
+    designSystem: {
+      intro:
+        "Se definieron las fundaciones del sistema de diseño del software interno de Bañados: paleta de colores, escala tipográfica para desktop y mobile, e iconografía, como base para sostener los flujos de venta, órdenes de compra y cotizaciones de forma consistente.",
+      atomicDesign: false,
+      fullImages: [
+        { src: banadosDsColores, label: "Paleta de colores" },
+        { src: banadosDsHeadingsDesktop, label: "Tipografía — encabezados desktop" },
+        { src: banadosDsHeadingsMobile, label: "Tipografía — encabezados mobile" },
+        { src: banadosDsParrafos, label: "Tipografía — párrafos" },
+        { src: banadosDsLabels, label: "Tipografía — labels" },
+        { src: banadosDsIconos, label: "Iconografía" },
+      ],
     },
   },
 }

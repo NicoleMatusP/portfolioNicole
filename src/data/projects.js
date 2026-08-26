@@ -58,6 +58,19 @@ export const projects = [
     tools: ["Figma", "v0.dev", "Cursor", "React"],
     duration: "3 meses",
   },
+  {
+    slug: "banados",
+    number: "05",
+    name: "Bañados",
+    description: "Sistema de diseño para el software interno de venta, órdenes de compra y cotizaciones de Bañados.",
+    tags: ["Design System", "UX Research", "UI Design"],
+    color: "#0E2A47",
+    year: "2025",
+    role: "UX/UI Designer Freelance",
+    company: "Bañados",
+    tools: ["Figma"],
+    duration: "5 meses",
+  },
 ]
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)

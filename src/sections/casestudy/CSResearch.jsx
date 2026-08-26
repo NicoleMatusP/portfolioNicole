@@ -29,18 +29,22 @@ const CSResearch = ({ content }) => {
           ))}
         </div>
 
-        <motion.h3 {...revealProps} className="cs-research__title font-display cs-research__title--spaced">
-          Hallazgos principales
-        </motion.h3>
+        {content.findings && content.findings.length > 0 && (
+          <>
+            <motion.h3 {...revealProps} className="cs-research__title font-display cs-research__title--spaced">
+              Hallazgos principales
+            </motion.h3>
 
-        <div className="cs-research__findings">
-          {content.findings.map((finding, i) => (
-            <motion.div {...revealProps} key={finding} className="cs-research__finding-card">
-              <span className="cs-research__finding-number font-display">{String(i + 1).padStart(2, "0")}</span>
-              <p>{finding}</p>
-            </motion.div>
-          ))}
-        </div>
+            <div className="cs-research__findings">
+              {content.findings.map((finding, i) => (
+                <motion.div {...revealProps} key={finding} className="cs-research__finding-card">
+                  <span className="cs-research__finding-number font-display">{String(i + 1).padStart(2, "0")}</span>
+                  <p>{finding}</p>
+                </motion.div>
+              ))}
+            </div>
+          </>
+        )}
 
         {!content.hideImage && (
           <motion.div {...revealProps} className="cs-research__image">

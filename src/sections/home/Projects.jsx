@@ -44,8 +44,25 @@ const ProjectCard = ({ project, size = "half" }) => (
   </motion.div>
 )
 
+const buildRows = (items) => {
+  const rows = []
+  let i = 0
+  let full = true
+  while (i < items.length) {
+    if (full || i + 1 >= items.length) {
+      rows.push({ type: "full", items: [items[i]] })
+      i += 1
+    } else {
+      rows.push({ type: "pair", items: [items[i], items[i + 1]] })
+      i += 2
+    }
+    full = !full
+  }
+  return rows
+}
+
 const Projects = () => {
-  const [p1, p2, p3, p4] = projects
+  const rows = buildRows(projects)
 
   return (
     <section id="proyectos" className="section projects">
@@ -55,12 +72,17 @@ const Projects = () => {
         </motion.p>
 
         <div className="projects__grid">
-          <ProjectCard project={p1} size="full" />
-          <div className="projects__row">
-            <ProjectCard project={p2} size="half" />
-            <ProjectCard project={p3} size="half" />
-          </div>
-          <ProjectCard project={p4} size="full" />
+          {rows.map((row) =>
+            row.type === "full" ? (
+              <ProjectCard key={row.items[0].slug} project={row.items[0]} size="full" />
+            ) : (
+              <div className="projects__row" key={row.items.map((p) => p.slug).join("-")}>
+                {row.items.map((p) => (
+                  <ProjectCard key={p.slug} project={p} size="half" />
+                ))}
+              </div>
+            )
+          )}
         </div>
       </div>
     </section>
