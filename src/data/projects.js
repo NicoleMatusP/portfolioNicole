@@ -35,14 +35,14 @@ export const projects = [
   {
     slug: "hoktus-dashboard",
     number: "03",
-    name: "Hoktus Dashboard",
-    description: "Sistema de gestión para operaciones de campo en tiempo real.",
-    tags: ["UI Design", "Data Viz", "Frontend"],
+    name: "Hoktus",
+    description: "Sistema de diseño para la plataforma de reclutamiento con IA de Hoktus.",
+    tags: ["Design System", "UI Design"],
     color: "#0D2137",
     year: "2024",
     role: "UX/UI Designer",
     company: "Hoktus",
-    tools: ["Figma", "React", "CSS"],
+    tools: ["Figma"],
     duration: "5 meses",
   },
   {

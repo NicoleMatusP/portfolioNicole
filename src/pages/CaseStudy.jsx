@@ -38,8 +38,12 @@ const CaseStudy = () => {
   const content = caseStudyContent[slug]
   const steps = progressSteps.filter(
     (step) =>
+      (step.id !== "problem" || content?.problem) &&
+      (step.id !== "research" || content?.research) &&
       (step.id !== "wireframes" || content?.wireframes) &&
       (step.id !== "benchmark" || content?.benchmark) &&
+      (step.id !== "definition" || content?.definition) &&
+      (step.id !== "architecture" || content?.architecture) &&
       (step.id !== "prototype" || content?.prototype) &&
       (step.id !== "results" || content?.results)
   )
@@ -90,23 +94,31 @@ const CaseStudy = () => {
       <div ref={setRef("overview")} data-section="overview">
         <CSOverview project={project} content={content.overview} />
       </div>
-      <div ref={setRef("problem")} data-section="problem">
-        <CSProblem content={content.problem} />
-      </div>
-      <div ref={setRef("research")} data-section="research">
-        <CSResearch content={content.research} />
-      </div>
+      {content.problem && (
+        <div ref={setRef("problem")} data-section="problem">
+          <CSProblem content={content.problem} />
+        </div>
+      )}
+      {content.research && (
+        <div ref={setRef("research")} data-section="research">
+          <CSResearch content={content.research} />
+        </div>
+      )}
       {content.benchmark && (
         <div ref={setRef("benchmark")} data-section="benchmark">
           <CSBenchmark content={content.benchmark} />
         </div>
       )}
-      <div ref={setRef("definition")} data-section="definition">
-        <CSDefinition content={content.definition} />
-      </div>
-      <div ref={setRef("architecture")} data-section="architecture">
-        <CSArchitecture content={content.architecture} />
-      </div>
+      {content.definition && (
+        <div ref={setRef("definition")} data-section="definition">
+          <CSDefinition content={content.definition} />
+        </div>
+      )}
+      {content.architecture && (
+        <div ref={setRef("architecture")} data-section="architecture">
+          <CSArchitecture content={content.architecture} />
+        </div>
+      )}
       {content.wireframes && (
         <div ref={setRef("wireframes")} data-section="wireframes">
           <CSWireframes content={content.wireframes} />

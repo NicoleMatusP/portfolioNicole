@@ -106,65 +106,18 @@ export const caseStudyContent = {
 
   "hoktus-dashboard": {
     hero: {
-      challenge: "Diseñar un dashboard operativo que reduzca el tiempo de reacción ante eventos de campo en tiempo real.",
+      challenge: "Construir el sistema de diseño del software de Hoktus, sosteniendo consistencia visual a medida que el producto crecía.",
     },
     overview: {
       context:
-        "Hoktus gestiona operaciones de campo que requieren visibilidad inmediata sobre el estado de múltiples equipos y ubicaciones al mismo tiempo. El desafío central era diseñar una interfaz de datos densa que siguiera siendo legible bajo presión operativa.",
-    },
-    problem: {
-      statement: "Los equipos de operaciones perdían tiempo crítico buscando información dispersa entre reportes y planillas.",
-      context: "[Nicole: completar con el detalle del problema específico de gestión de operaciones que Hoktus buscaba resolver.]",
-      painPoints: ["[Pain point 1]", "[Pain point 2]"],
-    },
-    research: {
-      methods: [
-        { name: "Entrevistas usuarios", description: "[Completar: con qué roles operativos se conversó]" },
-        { name: "Análisis de datos", description: "[Completar: qué datos operativos existentes se analizaron]" },
-        { name: "Benchmark", description: "[Completar: qué dashboards operativos se revisaron como referencia]" },
-      ],
-      findings: ["[Hallazgo 1]", "[Hallazgo 2]", "[Hallazgo 3]"],
-    },
-    benchmark: {
-      intro: "[Nicole: completar con el análisis competitivo de dashboards operativos realizado para Hoktus.]",
-      competitors: [
-        { name: "[Competidor 1]", category: "[Categoría]", observations: ["[Observación]", "[Observación]"] },
-        { name: "[Competidor 2]", category: "[Categoría]", observations: ["[Observación]", "[Observación]"] },
-      ],
-    },
-    definition: {
-      persona: {
-        name: "[Nombre del arquetipo]",
-        description: "[Completar descripción del usuario operativo principal]",
-        frustrations: ["[Frustración 1]", "[Frustración 2]", "[Frustración 3]"],
-        goals: ["[Objetivo 1]", "[Objetivo 2]", "[Objetivo 3]"],
-      },
-      hmw: "¿Cómo podríamos darle al equipo de operaciones visibilidad inmediata para que puedan reaccionar antes de que un problema escale?",
-    },
-    architecture: {
-      intro: "[Nicole: completar con decisiones de estructura y jerarquía de datos del dashboard.]",
-      decisions: ["[Decisión clave 1]", "[Decisión clave 2]"],
-    },
-    wireframes: {
-      intro: "[Nicole: completar con el proceso de exploración de layouts del dashboard.]",
-      note: "[Nota editorial sobre iteraciones descartadas]",
+        "Hoktus es una plataforma que usa inteligencia artificial para automatizar el reclutamiento y la contratación de personal operativo a gran escala en Latinoamérica, gestionando todo el proceso —desde el primer contacto hasta la validación de documentos— a través de WhatsApp. El trabajo con Hoktus se enfocó específicamente en el sistema de diseño de su software.",
     },
     designSystem: {
-      intro: "[Nicole: completar con la descripción del sistema visual construido para Hoktus.]",
+      intro:
+        "Se diseñó el sistema de diseño del software de Hoktus: paleta de colores, tipografía, iconografía y una librería de componentes reutilizables para sostener el producto de forma consistente a medida que se agregaban nuevas vistas.",
       atomicDesign: false,
       componentCount: "[Cantidad de componentes]",
       tokenCount: "[Cantidad de tokens]",
-    },
-    prototype: {
-      intro: "[Nicole: completar con el alcance del prototipo construido para Hoktus.]",
-    },
-    results: {
-      metrics: [
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-      ],
-      closing: "[Nicole: completar con aprendizajes del proyecto y qué harías diferente.]",
     },
   },
 
