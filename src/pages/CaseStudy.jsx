@@ -38,7 +38,10 @@ const CaseStudy = () => {
   const content = caseStudyContent[slug]
   const steps = progressSteps.filter(
     (step) =>
-      (step.id !== "wireframes" || content?.wireframes) && (step.id !== "benchmark" || content?.benchmark)
+      (step.id !== "wireframes" || content?.wireframes) &&
+      (step.id !== "benchmark" || content?.benchmark) &&
+      (step.id !== "prototype" || content?.prototype) &&
+      (step.id !== "results" || content?.results)
   )
   const [activeId, setActiveId] = useState(steps[0].id)
   const sectionRefs = useRef({})
@@ -111,14 +114,18 @@ const CaseStudy = () => {
       )}
       <div ref={setRef("design-system")} data-section="design-system">
         <CSDesignSystem content={content.designSystem} />
-        <CSFinalScreens project={project} content={content.finalScreens} />
+        {content.finalScreens && <CSFinalScreens project={project} content={content.finalScreens} />}
       </div>
-      <div ref={setRef("prototype")} data-section="prototype">
-        <CSPrototype content={content.prototype} />
-      </div>
-      <div ref={setRef("results")} data-section="results">
-        <CSResults content={content.results} />
-      </div>
+      {content.prototype && (
+        <div ref={setRef("prototype")} data-section="prototype">
+          <CSPrototype content={content.prototype} />
+        </div>
+      )}
+      {content.results && (
+        <div ref={setRef("results")} data-section="results">
+          <CSResults content={content.results} />
+        </div>
+      )}
 
       <CSNavigation currentSlug={slug} />
       <Footer />

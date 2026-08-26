@@ -1481,6 +1481,29 @@ h1, h2, h3, h4 {
   }
 }
 
+.cs-design-system__full-images {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.cs-design-system__full-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-line);
+}
+
+.cs-design-system__full-image figcaption {
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
 /* Final Screens */
 .cs-final-screens__hero {
   margin-top: 24px;

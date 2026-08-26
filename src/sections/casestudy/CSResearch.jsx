@@ -42,13 +42,15 @@ const CSResearch = ({ content }) => {
           ))}
         </div>
 
-        <motion.div {...revealProps} className="cs-research__image">
-          <ImagePlaceholder
-            label="Research"
-            aspectRatio="16/6"
-            instruction="Aquí van: capturas de entrevistas, affinity map, survey results"
-          />
-        </motion.div>
+        {!content.hideImage && (
+          <motion.div {...revealProps} className="cs-research__image">
+            <ImagePlaceholder
+              label="Research"
+              aspectRatio="16/6"
+              instruction="Aquí van: capturas de entrevistas, affinity map, survey results"
+            />
+          </motion.div>
+        )}
       </div>
     </section>
   )

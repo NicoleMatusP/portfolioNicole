@@ -1,12 +1,6 @@
-import pheroLandingHero from "../assets/phero/phero-landing-hero.jpg"
-import pheroCardTecnologia from "../assets/phero/phero-card-tecnologia.jpg"
-import pheroCardOperacion from "../assets/phero/phero-card-operacion.jpg"
-import pheroMobileOrdenes from "../assets/phero/phero-mobile-ordenes.jpg"
-import pheroPartnersPortrait from "../assets/phero/phero-partners-portrait.jpg"
-import pheroDsTipografia from "../assets/phero/phero-ds-tipografia.jpg"
-import pheroDsColores from "../assets/phero/phero-ds-colores.jpg"
-import pheroDsIconos from "../assets/phero/phero-ds-iconos.jpg"
-import pheroDashboard from "../assets/phero/phero-dashboard.jpg"
+import pheroDsFull1 from "../assets/phero/phero-ds-full-1.jpg"
+import pheroDsFull2 from "../assets/phero/phero-ds-full-2.jpg"
+import pheroLandingFull from "../assets/phero/phero-landing-full.jpg"
 
 export const caseStudyContent = {
   "phero-app": {
@@ -35,6 +29,7 @@ export const caseStudyContent = {
       ],
     },
     research: {
+      hideImage: true,
       methods: [
         {
           name: "Entrevistas en terreno",
@@ -101,34 +96,11 @@ export const caseStudyContent = {
       atomicDesign: true,
       componentCount: "Componentes organizados en átomos, moléculas y organismos",
       tokenCount: "Tokens de color, tipografía y espaciado documentados",
-      images: {
-        palette: pheroDsColores,
-        typography: pheroDsTipografia,
-        components: pheroDsIconos,
-      },
-    },
-    prototype: {
-      intro:
-        "El prototipo en Figma cubrió los flujos principales del software: creación y seguimiento de pedidos, coordinación entre bodegas, y el flujo del courier en ruta, incluyendo el escaneo de paquetes y el resumen de pago por entregas realizadas.",
-    },
-    finalScreens: {
-      hero: pheroLandingHero,
-      screens: [
-        { label: "Tecnología", src: pheroCardTecnologia, instruction: "Módulo de integración tecnológica del landing page" },
-        { label: "Operación", src: pheroCardOperacion, instruction: "Módulo de incorporación operativa a la red de distribución" },
-        { label: "Pedidos — mobile", src: pheroMobileOrdenes, instruction: "Vista de pedidos del courier en la versión mobile" },
-        { label: "Red de partners", src: pheroPartnersPortrait, instruction: "Operadores logísticos integrados a la red" },
+      fullImages: [
+        { src: pheroDsFull1, label: "Sistema de diseño — fundaciones: type scale, colores, grid e iconografía" },
+        { src: pheroDsFull2, label: "Sistema de diseño — componentes" },
+        { src: pheroLandingFull, label: "Página web completa" },
       ],
-    },
-    results: {
-      metrics: [
-        { value: "20% MoM", label: "Crecimiento orgánico mensual de la operación mientras la plataforma diseñada estaba en uso" },
-        { value: "3", label: "Roles de usuario cubiertos por el sistema de diseño: administrador, courier y bodega" },
-        { value: "0 → 1", label: "Página web y sistema de diseño completo, construidos desde cero en un año" },
-      ],
-      closing:
-        "Phero cerró operaciones cerca de un año después de este proyecto, tras no lograr sostener el negocio en el tiempo — un desenlace frecuente entre startups tempranas de logística en Latinoamérica. Diseñar en solitario para un software B2B naciente significó tomar decisiones con información incompleta, sostener consistencia visual sin un equipo de diseño detrás, y traducir procesos operativos reales —de couriers y personal de bodega— en decisiones de interfaz, todo mientras el producto y el negocio se definían en paralelo.",
-      image: pheroDashboard,
     },
   },
 

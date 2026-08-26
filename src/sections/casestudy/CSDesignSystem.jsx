@@ -25,17 +25,28 @@ const CSDesignSystem = ({ content }) => {
           </motion.p>
         )}
 
-        <div className="cs-design-system__grid">
-          <motion.div {...revealProps}>
-            <ImagePlaceholder label="Paleta de colores" aspectRatio="4/3" instruction="Aquí va: swatch de la paleta de colores con sus valores hex" src={content.images?.palette} />
-          </motion.div>
-          <motion.div {...revealProps}>
-            <ImagePlaceholder label="Tipografía" aspectRatio="4/3" instruction="Aquí va: escala tipográfica con pesos y tamaños usados" src={content.images?.typography} />
-          </motion.div>
-          <motion.div {...revealProps}>
-            <ImagePlaceholder label="Componentes base" aspectRatio="4/3" instruction="Aquí va: grid de componentes base del design system (botones, inputs, cards)" src={content.images?.components} />
-          </motion.div>
-        </div>
+        {content.fullImages && content.fullImages.length > 0 ? (
+          <div className="cs-design-system__full-images">
+            {content.fullImages.map((img) => (
+              <motion.figure {...revealProps} key={img.label} className="cs-design-system__full-image">
+                <figcaption>{img.label}</figcaption>
+                <img src={img.src} alt={img.label} />
+              </motion.figure>
+            ))}
+          </div>
+        ) : (
+          <div className="cs-design-system__grid">
+            <motion.div {...revealProps}>
+              <ImagePlaceholder label="Paleta de colores" aspectRatio="4/3" instruction="Aquí va: swatch de la paleta de colores con sus valores hex" src={content.images?.palette} />
+            </motion.div>
+            <motion.div {...revealProps}>
+              <ImagePlaceholder label="Tipografía" aspectRatio="4/3" instruction="Aquí va: escala tipográfica con pesos y tamaños usados" src={content.images?.typography} />
+            </motion.div>
+            <motion.div {...revealProps}>
+              <ImagePlaceholder label="Componentes base" aspectRatio="4/3" instruction="Aquí va: grid de componentes base del design system (botones, inputs, cards)" src={content.images?.components} />
+            </motion.div>
+          </div>
+        )}
       </div>
     </section>
   )
