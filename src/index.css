@@ -1555,6 +1555,28 @@ h1, h2, h3, h4 {
   margin-top: 32px;
 }
 
+.cs-prototype__video-wrap {
+  background: radial-gradient(circle at 25% 15%, #1c3f6e 0%, #0e2a47 38%, #060d1a 100%);
+  padding: 64px;
+  border-radius: 0;
+}
+
+.cs-prototype__video-wrap .image-placeholder--filled {
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.cs-prototype__video-wrap .image-placeholder--filled video {
+  border-radius: 8px;
+}
+
+@media (max-width: 720px) {
+  .cs-prototype__video-wrap {
+    padding: 28px;
+  }
+}
+
+
 /* Results */
 .cs-results__grid {
   display: grid;

@@ -7,6 +7,10 @@ import banadosDsHeadingsMobile from "../assets/banados/banados-ds-headings-mobil
 import banadosDsIconos from "../assets/banados/banados-ds-iconos.jpg"
 import banadosDsParrafos from "../assets/banados/banados-ds-parrafos.jpg"
 import banadosDsLabels from "../assets/banados/banados-ds-labels.jpg"
+import banadosDsAtoms from "../assets/banados/banados-ds-atoms.jpg"
+import banadosDsMolecules from "../assets/banados/banados-ds-molecules.jpg"
+import banadosDsOrganisms from "../assets/banados/banados-ds-organisms.jpg"
+import banadosPrototipoFlujo from "../assets/banados/banados-prototipo-flujo.mp4"
 
 export const caseStudyContent = {
   "phero-app": {
@@ -214,8 +218,10 @@ export const caseStudyContent = {
     },
     designSystem: {
       intro:
-        "Se definieron las fundaciones del sistema de diseño del software interno de Bañados: paleta de colores, escala tipográfica para desktop y mobile, e iconografía, como base para sostener los flujos de venta, órdenes de compra y cotizaciones de forma consistente.",
-      atomicDesign: false,
+        "Se diseñó el sistema de diseño del software interno de Bañados con metodología Atomic Design: fundaciones de paleta de colores, escala tipográfica e iconografía, y una librería de componentes (átomos, moléculas y organismos) para sostener los flujos de venta, órdenes de compra y cotizaciones de forma consistente.",
+      atomicDesign: true,
+      componentCount: "Componentes organizados en átomos, moléculas y organismos",
+      tokenCount: "Tokens de color y tipografía documentados",
       fullImages: [
         { src: banadosDsColores, label: "Paleta de colores" },
         { src: banadosDsHeadingsDesktop, label: "Tipografía — encabezados desktop" },
@@ -223,7 +229,16 @@ export const caseStudyContent = {
         { src: banadosDsParrafos, label: "Tipografía — párrafos" },
         { src: banadosDsLabels, label: "Tipografía — labels" },
         { src: banadosDsIconos, label: "Iconografía" },
+        { src: banadosDsAtoms, label: "Componentes — átomos" },
+        { src: banadosDsMolecules, label: "Componentes — moléculas" },
+        { src: banadosDsOrganisms, label: "Componentes — organismos" },
       ],
+    },
+    prototype: {
+      intro:
+        "El prototipo muestra el flujo final diseñado para el software interno de Bañados, navegando de principio a fin uno de los procesos digitalizados.",
+      video: banadosPrototipoFlujo,
+      videoAspectRatio: "1400/854",
     },
   },
 }
