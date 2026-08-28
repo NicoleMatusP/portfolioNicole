@@ -68,7 +68,7 @@ export const projects = [
     color: "#0E2A47",
     image: projectBanados,
     gradient:
-      "radial-gradient(circle at 82% 8%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 22%), radial-gradient(circle at 12% 88%, rgba(120,170,255,0.16) 0%, rgba(120,170,255,0) 32%), radial-gradient(circle at 25% 15%, #1c3f6e 0%, #0e2a47 38%, #060d1a 100%)",
+      "radial-gradient(circle at 82% 8%, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 22%), radial-gradient(circle at 12% 88%, rgba(160,195,255,0.20) 0%, rgba(160,195,255,0) 32%), radial-gradient(circle at 25% 15%, #416bd8 0%, #0038d3 32%, #002896 58%, #04091a 100%)",
     year: "2025",
     role: "UX/UI Designer Freelance",
     company: "Bañados",

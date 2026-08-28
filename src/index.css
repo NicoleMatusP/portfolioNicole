@@ -1556,7 +1556,7 @@ h1, h2, h3, h4 {
 }
 
 .cs-prototype__video-wrap {
-  background: radial-gradient(circle at 25% 15%, #1c3f6e 0%, #0e2a47 38%, #060d1a 100%);
+  background: radial-gradient(circle at 25% 15%, #416bd8 0%, #0038d3 32%, #002896 58%, #04091a 100%);
   padding: 64px;
   border-radius: 0;
 }
