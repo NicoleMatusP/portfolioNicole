@@ -28,10 +28,12 @@ const CSPrototype = ({ content }) => {
             />
           </motion.div>
         ) : (
-          <motion.div {...revealProps} className="cs-prototype__embed">
-            <p>[Embed del prototipo de Figma va aquí]</p>
-            <span>Reemplazar este bloque por un iframe de Figma cuando el prototipo esté listo</span>
-          </motion.div>
+          !content.hideEmbed && (
+            <motion.div {...revealProps} className="cs-prototype__embed">
+              <p>[Embed del prototipo de Figma va aquí]</p>
+              <span>Reemplazar este bloque por un iframe de Figma cuando el prototipo esté listo</span>
+            </motion.div>
+          )
         )}
 
         {content.figmaLink && (

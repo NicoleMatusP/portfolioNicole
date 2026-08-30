@@ -45,7 +45,7 @@ const Contact = () => {
           <a href="https://linkedin.com/in/nicole-matus" target="_blank" rel="noreferrer" className="link-underline">
             LinkedIn
           </a>
-          <a href="https://github.com/nicole-matus" target="_blank" rel="noreferrer" className="link-underline">
+          <a href="https://github.com/NicoleMatusP" target="_blank" rel="noreferrer" className="link-underline">
             GitHub
           </a>
           <a href={`${import.meta.env.BASE_URL}cv-nicole-matus.pdf`} target="_blank" rel="noreferrer" className="link-underline">

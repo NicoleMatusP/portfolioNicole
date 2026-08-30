@@ -15,30 +15,16 @@ const defaultScreens = [
   { label: "Pantalla 4", instruction: "Aquí va: vista de detalle o configuración secundaria" },
 ]
 
-const CSFinalScreens = ({ project, content }) => {
+const CSFinalScreens = ({ content }) => {
   const screens = content?.screens || defaultScreens
 
   return (
     <section className="section cs-final-screens">
       <div className="container">
-        <motion.p {...revealProps} className="eyebrow">
-          Diseño final
-        </motion.p>
-
-        <motion.div {...revealProps} className="cs-final-screens__hero">
-          <ImagePlaceholder
-            label={`Pantalla principal — ${project.name}`}
-            aspectRatio="16/9"
-            instruction="Aquí va: la pantalla hero / principal del producto terminado, en alta resolución"
-            src={content?.hero}
-          />
-        </motion.div>
-
-        <div className="cs-final-screens__grid">
+        <div className="cs-final-screens__row">
           {screens.map((s) => (
             <motion.div {...revealProps} key={s.label} className="cs-final-screens__item">
-              <ImagePlaceholder label={s.label} aspectRatio="3/4" instruction={s.instruction} src={s.src} />
-              <p className="cs-final-screens__caption">{s.instruction}</p>
+              <ImagePlaceholder label={s.label} aspectRatio="9/16" instruction={s.instruction} src={s.src} />
             </motion.div>
           ))}
         </div>

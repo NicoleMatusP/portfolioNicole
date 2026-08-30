@@ -44,6 +44,7 @@ const CaseStudy = () => {
       (step.id !== "benchmark" || content?.benchmark) &&
       (step.id !== "definition" || content?.definition) &&
       (step.id !== "architecture" || content?.architecture) &&
+      (step.id !== "design-system" || content?.designSystem || content?.finalScreens) &&
       (step.id !== "prototype" || content?.prototype) &&
       (step.id !== "results" || content?.results)
   )
@@ -124,10 +125,12 @@ const CaseStudy = () => {
           <CSWireframes content={content.wireframes} />
         </div>
       )}
-      <div ref={setRef("design-system")} data-section="design-system">
-        <CSDesignSystem content={content.designSystem} />
-        {content.finalScreens && <CSFinalScreens project={project} content={content.finalScreens} />}
-      </div>
+      {(content.designSystem || content.finalScreens) && (
+        <div ref={setRef("design-system")} data-section="design-system">
+          {content.designSystem && <CSDesignSystem content={content.designSystem} />}
+          {content.finalScreens && <CSFinalScreens project={project} content={content.finalScreens} />}
+        </div>
+      )}
       {content.prototype && (
         <div ref={setRef("prototype")} data-section="prototype">
           <CSPrototype content={content.prototype} />

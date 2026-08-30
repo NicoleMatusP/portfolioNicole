@@ -1,3 +1,7 @@
+import parkeateDsColores from "../assets/parkeate/parkeate-ds-colores.jpg"
+import parkeateDsTipografia from "../assets/parkeate/parkeate-ds-tipografia.jpg"
+import parkeateDsElevations from "../assets/parkeate/parkeate-ds-elevations.jpg"
+import parkeateDsComponentes from "../assets/parkeate/parkeate-ds-componentes.jpg"
 import pheroDsFull1 from "../assets/phero/phero-ds-full-1.jpg"
 import pheroDsFull2 from "../assets/phero/phero-ds-full-2.jpg"
 import pheroLandingFull from "../assets/phero/phero-landing-full.jpg"
@@ -11,6 +15,9 @@ import banadosDsAtoms from "../assets/banados/banados-ds-atoms.jpg"
 import banadosDsMolecules from "../assets/banados/banados-ds-molecules.jpg"
 import banadosDsOrganisms from "../assets/banados/banados-ds-organisms.jpg"
 import banadosPrototipoFlujo from "../assets/banados/banados-prototipo-flujo.mp4"
+import fittrackScreenSesiones from "../assets/fitTrack/fittrack-screen-sesiones.jpg"
+import fittrackScreenNuevaSesion from "../assets/fitTrack/fittrack-screen-nueva-sesion.jpg"
+import fittrackScreenEvolucion from "../assets/fitTrack/fittrack-screen-evolucion.jpg"
 
 export const caseStudyContent = {
   "phero-app": {
@@ -133,65 +140,23 @@ export const caseStudyContent = {
 
   parkeate: {
     hero: {
-      challenge: "Diseñar una experiencia de estacionamiento inteligente apoyada en detección por IA, construida con vibe coding.",
+      challenge:
+        "Diseñar el sistema de diseño y las pantallas de la aplicación de Parkeate, una plataforma que conecta a dueños de estacionamientos con conductores para arrendarlos por minuto.",
     },
     overview: {
       context:
-        "Parkeate buscaba resolver la fricción de encontrar estacionamiento disponible en tiempo real, integrando un modelo de detección por IA con una experiencia de usuario simple. El proyecto combinó diseño de producto con prototipado asistido por herramientas de IA generativa.",
-    },
-    problem: {
-      statement: "Encontrar estacionamiento disponible seguía siendo una tarea de prueba y error para la mayoría de los conductores.",
-      context: "[Nicole: completar con el detalle del problema específico que Parkeate buscaba resolver.]",
-      painPoints: ["[Pain point 1]", "[Pain point 2]"],
-    },
-    research: {
-      methods: [
-        { name: "Entrevistas usuarios", description: "[Completar: a quién se entrevistó]" },
-        { name: "Encuestas", description: "[Completar: tamaño y foco de la encuesta]" },
-        { name: "Benchmark", description: "[Completar: qué apps de estacionamiento se analizaron]" },
-      ],
-      findings: ["[Hallazgo 1]", "[Hallazgo 2]", "[Hallazgo 3]"],
-    },
-    benchmark: {
-      intro: "[Nicole: completar con el análisis competitivo realizado para Parkeate.]",
-      competitors: [
-        { name: "[Competidor 1]", category: "[Categoría]", observations: ["[Observación]", "[Observación]"] },
-        { name: "[Competidor 2]", category: "[Categoría]", observations: ["[Observación]", "[Observación]"] },
-      ],
-    },
-    definition: {
-      persona: {
-        name: "[Nombre del arquetipo]",
-        description: "[Completar descripción del conductor tipo]",
-        frustrations: ["[Frustración 1]", "[Frustración 2]", "[Frustración 3]"],
-        goals: ["[Objetivo 1]", "[Objetivo 2]", "[Objetivo 3]"],
-      },
-      hmw: "¿Cómo podríamos usar detección en tiempo real para que un conductor encuentre estacionamiento sin dar vueltas?",
-    },
-    architecture: {
-      intro: "[Nicole: completar con decisiones de estructura del flujo de búsqueda y reserva.]",
-      decisions: ["[Decisión clave 1]", "[Decisión clave 2]"],
-    },
-    wireframes: {
-      intro: "[Nicole: completar con el proceso de ideación del flujo de detección y reserva.]",
-      note: "[Nota editorial sobre iteraciones descartadas]",
+        "Parkeate es una startup chilena fundada en 2019 por Dominique Dubois, que conecta a dueños de estacionamientos sin uso —en comunidades de edificios, condominios y empresas— con conductores que buscan arrendar un espacio por minuto, hora o mes, con precios entre $10 y $54 por minuto. Para el conductor, la propuesta es encontrar y reservar en segundos: buscar por ubicación, elegir el espacio y confirmar la reserva. Para el propietario, es una forma de convertir un estacionamiento en desuso en un ingreso. La plataforma ha participado en programas como Start-Up Chile, y ha expandido su operación desde Santiago hacia Concepción y Viña del Mar, además de un piloto en Dallas, Estados Unidos. El trabajo con Parkeate se enfocó en diseñar el sistema de diseño y las pantallas de la aplicación.",
     },
     designSystem: {
-      intro: "[Nicole: completar con la descripción del sistema visual construido para Parkeate.]",
+      intro:
+        "Se diseñó el sistema de diseño y las pantallas de la aplicación de Parkeate: paleta de colores, tipografía, elevaciones y una librería de componentes para sostener la experiencia de búsqueda, reserva y arriendo de estacionamientos.",
       atomicDesign: false,
-      componentCount: "[Cantidad de componentes]",
-      tokenCount: "[Cantidad de tokens]",
-    },
-    prototype: {
-      intro: "[Nicole: completar con el alcance del prototipo construido, incluyendo el uso de v0.dev y Cursor.]",
-    },
-    results: {
-      metrics: [
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
-        { value: "[Métrica]", label: "[Descripción de la métrica]" },
+      fullImages: [
+        { src: parkeateDsColores, label: "Paleta de colores" },
+        { src: parkeateDsTipografia, label: "Tipografía" },
+        { src: parkeateDsElevations, label: "Elevaciones" },
+        { src: parkeateDsComponentes, label: "Componentes" },
       ],
-      closing: "[Nicole: completar con aprendizajes del proyecto y qué harías diferente.]",
     },
   },
 
@@ -239,6 +204,65 @@ export const caseStudyContent = {
         "El prototipo muestra el flujo final diseñado para el software interno de Bañados, navegando de principio a fin uno de los procesos digitalizados.",
       video: banadosPrototipoFlujo,
       videoAspectRatio: "1400/854",
+    },
+  },
+
+  fittrack: {
+    hero: {
+      challenge:
+        "Diseñar y desarrollar con vibe coding una app para llevar el registro y los avances de tus entrenamientos en el gimnasio, día a día.",
+    },
+    overview: {
+      context:
+        "FitTrack es un proyecto personal: una app para llevar el registro y la evolución de los entrenamientos de gimnasio día a día, permitiendo ver el progreso a lo largo del tiempo. El proceso se construyó en un 90% con inteligencia artificial, desde el research hasta el desarrollo.",
+    },
+    problem: {
+      statement:
+        "El 85% de los usuarios abandona el registro de sus entrenamientos por la fricción de ingresar datos manualmente bajo fatiga muscular.",
+      context:
+        "FitTrack elimina la sobrecarga mental de ese registro mediante un flujo lineal y controles táctiles optimizados para el gimnasio, reduciendo a cero el uso del teclado nativo.",
+    },
+    research: {
+      methods: [
+        {
+          name: "Entrevistas en terreno",
+          description: "Entrevistas a 6 personas para entender cómo abordaban el registro de sus entrenamientos.",
+        },
+        {
+          name: "Análisis con IA",
+          description: "Los hallazgos de las entrevistas se analizaron con IA para tomar las decisiones de diseño.",
+        },
+      ],
+      findings: [
+        "Ambos usuarios exigen gráficos detallados sobre composición corporal y evolución de cargas: el progreso visual es un requisito, no un extra.",
+        "El registro manual de series y pesos debe ser automático o extremadamente rápido — si toma tiempo, la app se abandona.",
+        "Las herramientas actuales (reloj inteligente, apps de gimnasio, planillas) cubren partes del problema, pero ninguna resuelve el registro completo sin fricción.",
+      ],
+      spectrum: {
+        label: "Dependencia vs. autonomía en el entrenamiento",
+        points: [
+          {
+            name: "Daniela",
+            description: "Depende de la guía constante de un coach para saber qué y cómo entrenar.",
+          },
+          {
+            name: "Ignacio",
+            description: "Busca estructura propia y planifica sus rutinas con anticipación.",
+          },
+        ],
+      },
+    },
+    prototype: {
+      intro:
+        "El primer MVP se generó en Stitch a partir de un prompt, orientando el diseño con imágenes de referencia y la paleta de colores deseada. Luego se llevó a Antigravity para pasar a desarrollo y seguir puliendo las funcionalidades.",
+      hideEmbed: true,
+    },
+    finalScreens: {
+      screens: [
+        { label: "Sesiones", src: fittrackScreenSesiones, instruction: "Vista principal con la sesión en curso y la racha de consistencia" },
+        { label: "Nueva sesión", src: fittrackScreenNuevaSesion, instruction: "Registro de ejercicios con controles táctiles, sin teclado" },
+        { label: "Evolución", src: fittrackScreenEvolucion, instruction: "Visualización del progreso de peso y volumen por ejercicio" },
+      ],
     },
   },
 }

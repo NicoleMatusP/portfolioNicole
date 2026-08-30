@@ -46,14 +46,33 @@ const CSResearch = ({ content }) => {
           </>
         )}
 
-        {!content.hideImage && (
-          <motion.div {...revealProps} className="cs-research__image">
-            <ImagePlaceholder
-              label="Research"
-              aspectRatio="16/6"
-              instruction="Aquí van: capturas de entrevistas, affinity map, survey results"
-            />
+        {content.spectrum && content.spectrum.points?.length === 2 ? (
+          <motion.div {...revealProps} className="cs-research__spectrum">
+            <span className="cs-research__spectrum-label">{content.spectrum.label}</span>
+            <div className="cs-research__spectrum-track">
+              <div className="cs-research__spectrum-point">
+                <span className="cs-research__spectrum-dot" />
+                <h4 className="font-display">{content.spectrum.points[0].name}</h4>
+                <p>{content.spectrum.points[0].description}</p>
+              </div>
+              <div className="cs-research__spectrum-line" />
+              <div className="cs-research__spectrum-point cs-research__spectrum-point--end">
+                <span className="cs-research__spectrum-dot" />
+                <h4 className="font-display">{content.spectrum.points[1].name}</h4>
+                <p>{content.spectrum.points[1].description}</p>
+              </div>
+            </div>
           </motion.div>
+        ) : (
+          !content.hideImage && (
+            <motion.div {...revealProps} className="cs-research__image">
+              <ImagePlaceholder
+                label="Research"
+                aspectRatio="16/6"
+                instruction="Aquí van: capturas de entrevistas, affinity map, survey results"
+              />
+            </motion.div>
+          )
         )}
       </div>
     </section>

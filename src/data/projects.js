@@ -2,7 +2,7 @@ import projectAiep from "../assets/aiep/proyecto-aiep.jpg"
 import projectPhero from "../assets/phero/fondo_web_phero.jpg"
 import projectBanados from "../assets/banados/banados-cover.jpg"
 
-export const projects = [
+const allProjects = [
   {
     slug: "aiep",
     type: "empresa",
@@ -45,14 +45,17 @@ export const projects = [
     company: "Hoktus",
     tools: ["Figma"],
     duration: "5 meses",
+    hidden: true,
   },
   {
     slug: "parkeate",
-    number: "04",
+    number: "03",
     name: "Parkeate",
-    description: "App de estacionamiento inteligente con IA de detección.",
-    tags: ["UX/UI", "AI Integration", "Vibe Coding"],
-    color: "#1A2E1A",
+    description: "Sistema de diseño y app para arrendar estacionamientos por minuto.",
+    tags: ["UX/UI", "Design System", "Vibe Coding"],
+    color: "#701545",
+    gradient:
+      "radial-gradient(circle at 82% 8%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 22%), radial-gradient(circle at 12% 88%, rgba(158,29,97,0.20) 0%, rgba(158,29,97,0) 32%), radial-gradient(circle at 25% 15%, #9e1d61 0%, #701545 42%, #232529 100%)",
     year: "2024",
     role: "Product Designer",
     company: "Parkeate",
@@ -61,7 +64,7 @@ export const projects = [
   },
   {
     slug: "banados",
-    number: "05",
+    number: "04",
     name: "Bañados",
     description: "Sistema de diseño para el software interno de venta, órdenes de compra y cotizaciones de Bañados.",
     tags: ["Design System", "UX Research", "UI Design"],
@@ -75,7 +78,24 @@ export const projects = [
     tools: ["Figma"],
     duration: "5 meses",
   },
+  {
+    slug: "fittrack",
+    number: "05",
+    name: "FitTrack",
+    description: "App de tracking de entrenamientos, diseñada y desarrollada con vibe coding.",
+    tags: ["Product Design", "Vibe Coding", "0 a 1"],
+    color: "#0E192B",
+    gradient:
+      "radial-gradient(circle at 82% 8%, rgba(223,243,66,0.18) 0%, rgba(223,243,66,0) 26%), radial-gradient(circle at 15% 85%, rgba(223,243,66,0.12) 0%, rgba(223,243,66,0) 30%), radial-gradient(circle at 25% 15%, #1a2b45 0%, #0e192b 45%, #050a12 100%)",
+    year: "2025",
+    role: "Product Designer",
+    company: "FitTrack",
+    tools: ["Stitch", "Antigravity"],
+    duration: "Proyecto personal",
+  },
 ]
+
+export const projects = allProjects.filter((p) => !p.hidden)
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)
 
