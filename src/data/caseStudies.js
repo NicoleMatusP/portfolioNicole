@@ -2,6 +2,7 @@ import parkeateDsColores from "../assets/parkeate/parkeate-ds-colores.jpg"
 import parkeateDsTipografia from "../assets/parkeate/parkeate-ds-tipografia.jpg"
 import parkeateDsElevations from "../assets/parkeate/parkeate-ds-elevations.jpg"
 import parkeateDsComponentes from "../assets/parkeate/parkeate-ds-componentes.jpg"
+import parkeatePrototipoFlujo from "../assets/parkeate/parkeate-prototipo-flujo.mp4"
 import pheroDsFull1 from "../assets/phero/phero-ds-full-1.jpg"
 import pheroDsFull2 from "../assets/phero/phero-ds-full-2.jpg"
 import pheroLandingFull from "../assets/phero/phero-landing-full.jpg"
@@ -117,7 +118,7 @@ export const caseStudyContent = {
       fullImages: [
         { src: pheroDsFull1, label: "Sistema de diseño — fundaciones: type scale, colores, grid e iconografía" },
         { src: pheroDsFull2, label: "Sistema de diseño — componentes" },
-        { src: pheroLandingFull, label: "Página web completa" },
+        { src: pheroLandingFull, label: "Página web completa", title: "La página web de Phero" },
       ],
     },
   },
@@ -159,6 +160,15 @@ export const caseStudyContent = {
         { src: parkeateDsComponentes, label: "Componentes" },
       ],
     },
+    prototype: {
+      intro: "El prototipo muestra el flujo de búsqueda y reserva de un estacionamiento, desde la pantalla de inicio hasta la confirmación del pago.",
+      hideEmbed: true,
+      video: parkeatePrototipoFlujo,
+      videoAspectRatio: "638/1384",
+      videoGradient: "radial-gradient(circle at 25% 15%, #9e1d61 0%, #701545 42%, #232529 100%)",
+      videoMaxWidth: "340px",
+      videoRadius: "33px",
+    },
   },
 
   banados: {
@@ -181,6 +191,7 @@ export const caseStudyContent = {
           description: "Registro de los procesos vigentes de venta, emisión de órdenes de compra y cotizaciones, como base para el nuevo software.",
         },
       ],
+      hideImage: true,
     },
     designSystem: {
       intro:
@@ -260,6 +271,7 @@ export const caseStudyContent = {
       video: fittrackPrototipoFlujo,
       videoAspectRatio: "800/1410",
       videoGradient: "radial-gradient(circle at 25% 15%, #24405f 0%, #0e192b 45%, #04070d 100%)",
+      videoMaxWidth: "380px",
     },
     finalScreens: {
       screens: [

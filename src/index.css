@@ -1582,6 +1582,12 @@ h1, h2, h3, h4 {
   margin-top: 32px;
 }
 
+.cs-design-system__full-image-title {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
 .cs-design-system__full-image img {
   display: block;
   width: 100%;
@@ -1665,12 +1671,13 @@ h1, h2, h3, h4 {
 }
 
 .cs-prototype__video-wrap .image-placeholder--filled {
-  border-radius: 8px;
+  border-radius: var(--proto-video-radius, 8px);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  margin-inline: auto;
 }
 
 .cs-prototype__video-wrap .image-placeholder--filled video {
-  border-radius: 8px;
+  border-radius: var(--proto-video-radius, 8px);
 }
 
 @media (max-width: 720px) {

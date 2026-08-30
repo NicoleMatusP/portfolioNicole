@@ -97,7 +97,7 @@ const CaseStudy = () => {
       </div>
       {content.problem && (
         <div ref={setRef("problem")} data-section="problem">
-          <CSProblem content={content.problem} />
+          <CSProblem content={content.problem} italic />
         </div>
       )}
       {content.research && (

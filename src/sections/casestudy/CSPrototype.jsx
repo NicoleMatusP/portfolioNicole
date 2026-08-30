@@ -25,11 +25,18 @@ const CSPrototype = ({ content }) => {
             className="cs-prototype__video-wrap"
             style={content.videoGradient ? { background: content.videoGradient } : undefined}
           >
-            <ImagePlaceholder
-              label="Prototipo"
-              aspectRatio={content.videoAspectRatio || "16/9"}
-              src={content.video}
-            />
+            <div
+              style={{
+                ...(content.videoMaxWidth ? { maxWidth: content.videoMaxWidth, marginInline: "auto" } : {}),
+                ...(content.videoRadius ? { "--proto-video-radius": content.videoRadius } : {}),
+              }}
+            >
+              <ImagePlaceholder
+                label="Prototipo"
+                aspectRatio={content.videoAspectRatio || "16/9"}
+                src={content.video}
+              />
+            </div>
           </motion.div>
         ) : (
           !content.hideEmbed && (

@@ -29,6 +29,9 @@ const CSDesignSystem = ({ content }) => {
           <div className="cs-design-system__full-images">
             {content.fullImages.map((img) => (
               <motion.figure {...revealProps} key={img.label} className="cs-design-system__full-image">
+                {img.title && (
+                  <figcaption className="cs-design-system__full-image-title font-display">{img.title}</figcaption>
+                )}
                 <img src={img.src} alt={img.label} />
               </motion.figure>
             ))}
