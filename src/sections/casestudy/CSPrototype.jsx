@@ -20,7 +20,11 @@ const CSPrototype = ({ content }) => {
         </motion.p>
 
         {content.video ? (
-          <motion.div {...revealProps} className="cs-prototype__video-wrap">
+          <motion.div
+            {...revealProps}
+            className="cs-prototype__video-wrap"
+            style={content.videoGradient ? { background: content.videoGradient } : undefined}
+          >
             <ImagePlaceholder
               label="Prototipo"
               aspectRatio={content.videoAspectRatio || "16/9"}

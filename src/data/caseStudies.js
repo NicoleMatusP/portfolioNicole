@@ -18,6 +18,7 @@ import banadosPrototipoFlujo from "../assets/banados/banados-prototipo-flujo.mp4
 import fittrackScreenSesiones from "../assets/fitTrack/fittrack-screen-sesiones.jpg"
 import fittrackScreenNuevaSesion from "../assets/fitTrack/fittrack-screen-nueva-sesion.jpg"
 import fittrackScreenEvolucion from "../assets/fitTrack/fittrack-screen-evolucion.jpg"
+import fittrackPrototipoFlujo from "../assets/fitTrack/fittrack-prototipo-flujo.mp4"
 
 export const caseStudyContent = {
   "phero-app": {
@@ -256,6 +257,9 @@ export const caseStudyContent = {
       intro:
         "El primer MVP se generó en Stitch a partir de un prompt, orientando el diseño con imágenes de referencia y la paleta de colores deseada. Luego se llevó a Antigravity para pasar a desarrollo y seguir puliendo las funcionalidades.",
       hideEmbed: true,
+      video: fittrackPrototipoFlujo,
+      videoAspectRatio: "800/1410",
+      videoGradient: "radial-gradient(circle at 25% 15%, #24405f 0%, #0e192b 45%, #04070d 100%)",
     },
     finalScreens: {
       screens: [
