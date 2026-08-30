@@ -9,22 +9,34 @@ const revealProps = {
 
 const formation = [
   {
-    title: "Diplomado en UX/UI Design",
+    title: "Diplomado en Estrategia y Experiencia de Productos en la ERA de la IA",
+    institution: "Universidad de Chile — Facultad de Economía y Negocios",
+    year: "May 2026 — Ago 2026",
+    current: false,
+  },
+  {
+    title: "Programa Front and React",
     institution: "Desafío Latam",
-    year: "2023",
+    year: "Nov 2025 — Jun 2026",
     current: false,
   },
   {
-    title: "Ingeniería en Diseño de Producto",
-    institution: "Universidad Andrés Bello",
-    year: "2020 — 2024",
+    title: "Curso UI (Atomic Design)",
+    institution: "Coder House",
+    year: "Dic 2023 — Feb 2024",
     current: false,
   },
   {
-    title: "Especialización en IA aplicada al diseño",
-    institution: "Formación autodidacta",
-    year: "2025",
-    current: true,
+    title: "Licenciada en Diseño con Mención en Diseño Gráfico",
+    institution: "Universidad Diego Portales",
+    year: "Mar 2017 — Jul 2023",
+    current: false,
+  },
+  {
+    title: "Curso de Desarrollo Web",
+    institution: "Coder House",
+    year: "Feb 2023 — Abr 2023",
+    current: false,
   },
 ]
 

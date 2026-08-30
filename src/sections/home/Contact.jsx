@@ -42,7 +42,7 @@ const Contact = () => {
         </motion.button>
 
         <motion.div {...revealProps} className="contact__links">
-          <a href="https://linkedin.com/in/nicole-matus" target="_blank" rel="noreferrer" className="link-underline">
+          <a href="https://www.linkedin.com/in/nicolematusdiseñadora/" target="_blank" rel="noreferrer" className="link-underline">
             LinkedIn
           </a>
           <a href="https://github.com/NicoleMatusP" target="_blank" rel="noreferrer" className="link-underline">

@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Routes, Route, useLocation } from "react-router-dom"
 import Nav from "./components/Nav"
 import CustomCursor from "./components/CustomCursor"
-import PasswordGate from "./components/PasswordGate"
 import Home from "./pages/Home"
 import CaseStudy from "./pages/CaseStudy"
 import CompanyPage from "./pages/CompanyPage"
@@ -49,9 +48,7 @@ function App() {
             path="/proyecto/aiep-intranet"
             element={
               <PageWrapper>
-                <PasswordGate>
-                  <EmployeeCaseStudy slug="aiep-intranet" />
-                </PasswordGate>
+                <EmployeeCaseStudy slug="aiep-intranet" />
               </PageWrapper>
             }
           />
@@ -59,9 +56,7 @@ function App() {
             path="/proyecto/aiep-educacion-continua"
             element={
               <PageWrapper>
-                <PasswordGate>
-                  <EmployeeCaseStudy slug="aiep-educacion-continua" />
-                </PasswordGate>
+                <EmployeeCaseStudy slug="aiep-educacion-continua" />
               </PageWrapper>
             }
           />
